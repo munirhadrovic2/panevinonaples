@@ -74,7 +74,7 @@ export default function Awards() {
                             The <strong>Naples</strong> area dining scene is better than ever. <strong>Panevino</strong> is a family-owned <strong>Northern Italian Restaurant</strong> serving the community since 1994.
                         </p>
                         <blockquote className="border-l-4 border-primary pl-4 italic text-secondary mb-4">
-                            One of our reviews: "I have never eaten better Italian food, especially Chicken Scarparello."
+                            One of our reviews: &quot;I have never eaten better Italian food, especially Chicken Scarparello.&quot;
                         </blockquote>
                         <p className="text-lg text-secondary leading-relaxed">
                             Our mission is to ensure that every guest receives prompt, professional, friendly, and courteous service.

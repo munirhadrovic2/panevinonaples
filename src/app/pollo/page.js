@@ -25,7 +25,7 @@ export default function PolloPage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-[#4a4a4a] font-light italic max-w-3xl mx-auto text-center mb-12 leading-relaxed tracking-wide">
-                    Experience our chef's signature creations — from tender chicken and exquisite veal to indulgent Parmigiana. Every dish reflects the heart of Italian comfort food, artfully plated and made with love.
+                    Experience our chef&apos;s signature creations — from tender chicken and exquisite veal to indulgent Parmigiana. Every dish reflects the heart of Italian comfort food, artfully plated and made with love.
                 </p>
 
                 {/* Chicken Section */}
