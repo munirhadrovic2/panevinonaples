@@ -36,24 +36,24 @@ export default function Hero() {
                         8853 Tamiami Trail N, Naples
                     </p>
 
-
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        {/* Primary Button */}
+                        {/* Primary Button → scroll to Menu section */}
                         <a
-                            href="/menu"
+                            href="#menu"
                             className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-md text-lg transition-colors duration-300"
                         >
                             View Menu
                         </a>
 
-                        {/* Secondary Button */}
+                        {/* Secondary Button → scroll to Contact section */}
                         <a
-                            href="/reservation"
+                            href="#contact"
                             className="inline-block px-8 py-4 border border-white text-white font-semibold rounded-md text-lg transition-colors duration-300 hover:bg-white hover:text-primary"
                         >
                             Reserve Now
                         </a>
                     </div>
+
 
 
                 </div>

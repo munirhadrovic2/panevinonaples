@@ -86,6 +86,7 @@ export default function Awards() {
                 </div>
             </section>
 
+
             {/* About Panevino Section (no card) */}
             <section className="w-full py-20 bg-accent">
                 <div className="container mx-auto px-4">
