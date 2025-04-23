@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  @apply bg-white text-gray-800 font-sans;
+}
+
+/* Container (for max width) */
+.container {
+  @apply w-full max-w-[1280px] mx-auto px-4;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+}
+
+/* Links - remove red text by default */
+a {
+  @apply text-gray-700 no-underline;
+}
