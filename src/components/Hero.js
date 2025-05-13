@@ -1,22 +1,46 @@
 "use client";
 
-import { motion } from "framer-motion"; // ✅ New import for animation
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+const heroImages = [
+    "/images/hero-1.jpg",
+    "/images/hero-2.jpg",
+    "/images/hero-3.jpg",
+];
 
 export default function Hero() {
-    return (
-        <section
-            className="w-full min-h-screen pt-20 bg-cover bg-center relative flex items-center justify-center"
-            style={{ backgroundImage: "url('/images/hero.jpg')" }}
-        >
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/60"></div>
+    const [currentImage, setCurrentImage] = useState(0);
 
-            {/* Content */}
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % heroImages.length);
+        }, 4000); // Change every 7 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <section className="w-full min-h-screen pt-20 relative flex items-center justify-center overflow-hidden">
+            {/* Dynamic background image with fade transition */}
+            <motion.div
+                key={currentImage}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url('${heroImages[currentImage]}')` }}
+            />
+
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/60 z-10" />
+
+            {/* Hero Content */}
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="relative z-10 text-center px-4"
+                className="relative z-20 text-center px-4"
             >
                 <div className="inline-block bg-white/10 border border-white/30 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -26,26 +50,20 @@ export default function Hero() {
                         Panevino Ristorante welcomes you to an authentic Italian dining experience.
                     </p>
 
-                    {/* Trust line */}
                     <p className="text-base md:text-lg text-gray-200 mb-2">
                         The best Italian restaurant in Naples, Florida
                     </p>
-
-                    {/* Address line */}
                     <p className="text-base md:text-lg text-gray-300 mb-6">
                         8853 Tamiami Trail N, Naples
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        {/* Primary Button → scroll to Menu section */}
                         <a
                             href="#menu"
                             className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-md text-lg transition-colors duration-300"
                         >
                             View Menu
                         </a>
-
-                        {/* Secondary Button → scroll to Contact section */}
                         <a
                             href="#contact"
                             className="inline-block px-8 py-4 border border-white text-white font-semibold rounded-md text-lg transition-colors duration-300 hover:bg-white hover:text-primary"
@@ -53,9 +71,6 @@ export default function Hero() {
                             Reserve Now
                         </a>
                     </div>
-
-
-
                 </div>
             </motion.div>
         </section>
