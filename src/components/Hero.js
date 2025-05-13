@@ -48,8 +48,6 @@ export default function Hero() {
                 />
             </AnimatePresence>
 
-
-
             {/* Dark overlay for readability */}
             <div className="absolute inset-0 bg-black/60 z-10" />
 
