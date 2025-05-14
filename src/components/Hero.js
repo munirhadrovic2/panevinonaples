@@ -60,38 +60,39 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="relative z-20 text-center px-4"
                 >
-                    <div className="inline-block bg-white/10 border border-white/30 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                    <div className="inline-block bg-white/10 border border-white/30 backdrop-blur-[1px] px-4 py-5 md:px-6 md:py-6 rounded-lg shadow-xl">
+                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
                             A Taste of Italy in the Heart of Naples
                         </h1>
-                        <p className="text-lg md:text-2xl text-white mb-6">
+                        <p className="text-base md:text-xl text-white mb-4">
                             Panevino Ristorante welcomes you to an authentic Italian dining experience.
                         </p>
 
-                        <p className="text-base md:text-lg text-gray-200 mb-2">
+                        <p className="text-sm md:text-base text-gray-200 mb-1">
                             The best Italian restaurant in Naples, Florida
                         </p>
 
-                        <p className="text-base md:text-lg text-gray-300 mb-6">
+                        <p className="text-sm md:text-base text-gray-300 mb-4">
                             8853 Tamiami Trail N, Naples
                         </p>
 
                         {/* Desktop Buttons */}
-                        <div className="hidden sm:flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="hidden sm:flex flex-col sm:flex-row gap-3 justify-center">
                             <a
                                 href="#menu"
-                                className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-md text-lg transition-colors duration-300"
+                                className="inline-block px-6 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-md text-base transition-colors duration-300"
                             >
                                 View Menu
                             </a>
                             <a
                                 href="#contact"
-                                className="inline-block px-8 py-4 border border-white text-white font-semibold rounded-md text-lg transition-colors duration-300 hover:bg-white hover:text-primary"
+                                className="inline-block px-6 py-3 border border-white text-white font-semibold rounded-md text-base transition-colors duration-300 hover:bg-white hover:text-primary"
                             >
                                 Reserve Now
                             </a>
                         </div>
                     </div>
+
                 </motion.div>
             </section>
 
