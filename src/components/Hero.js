@@ -21,8 +21,9 @@ export default function Hero() {
 
     return (
         <>
-            <section className="w-full min-h-screen pt-20 relative flex items-center justify-center overflow-hidden">
-                {/* Fallback Background */}
+            <section className="w-full min-h-screen pt-20 relative flex items-start justify-center overflow-hidden">
+
+            {/* Fallback Background */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
@@ -58,7 +59,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative z-20 text-center px-4"
+                    className="relative z-20 text-center px-4 mt-[12vh] md:mt-[14vh]"
                 >
                     <div className="inline-block bg-white/10 border border-white/30 backdrop-blur-[1px] px-4 py-5 md:px-6 md:py-6 rounded-lg shadow-xl">
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
