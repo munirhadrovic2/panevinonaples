@@ -47,7 +47,7 @@ export default function Footer() {
                         <h3 className="text-2xl font-bold text-primary mb-6">Contact</h3>
                         <p className="mb-2">8853 Tamiami Trl N, Naples, FL 34108</p>
                         <p className="mb-2">(239) 514-8655</p>
-                        <p className="">info@panevino.com</p>
+                        {/*<p className="">info@panevino.com</p>*/}
                     </div>
 
                     {/* Right Column: Opening Hours */}

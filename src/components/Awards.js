@@ -49,7 +49,7 @@ export default function Awards() {
                             The <strong>Naples</strong> area dining scene is better than ever. <strong>Panevino</strong> is a family-owned <strong>Northern Italian Restaurant</strong> serving the community since 1994.
                         </p>
                         <blockquote className="border-l-4 border-primary pl-4 italic text-secondary mb-4">
-                            One of our reviews: "I have never eaten better Italian food, especially Chicken Scarparello."
+                            One of our reviews: &quot;I have never eaten better Italian food, especially Chicken Scarparello.&quot;
                         </blockquote>
                         <p className="text-lg text-secondary leading-relaxed mb-4">
                             Our mission is to ensure that every guest receives prompt, professional, friendly, and courteous service.
@@ -57,11 +57,12 @@ export default function Awards() {
                             At Panevino, we provide nutritious, well-prepared meals made with quality ingredients — all at a fair price.
                         </p>
                         <p className="text-lg text-secondary leading-relaxed mb-4">
-                            Beyond just food, we offer an experience — a place where every detail reflects our deep-rooted Italian heritage. From the aroma of freshly prepared sauces to the warmth of candlelit dinners, we invite you to feel at home the moment you walk through our doors. Whether you're celebrating a special occasion or simply enjoying a weekday meal, our team is honored to welcome you with the same love and passion we put into every dish.
+                            Beyond just food, we offer an experience — a place where every detail reflects our deep-rooted Italian heritage. From the aroma of freshly prepared sauces to the warmth of candlelit dinners, we invite you to feel at home the moment you walk through our doors. Whether youapos;re celebrating a special occasion or simply enjoying a weekday meal, our team is honored to welcome you with the same love and passion we put into every dish.
                         </p>
                         <p className="text-lg text-secondary leading-relaxed">
-                            Panevino is more than a restaurant — it's a celebration of authentic Italian flavors, family traditions, and heartfelt hospitality.
+                            Panevino is more than a restaurant — it&apos;s a celebration of authentic Italian flavors, family traditions, and heartfelt hospitality.
                         </p>
+
                     </div>
 
                 </div>
