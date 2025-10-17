@@ -71,7 +71,7 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="absolute bottom-24 sm:bottom-8 left-4 sm:left-8 z-20 max-w-[90%] pb-4 sm:pb-0"
+                    className="absolute bottom-[88px] sm:bottom-8 left-4 sm:left-8 z-20 max-w-[90%]"
                 >
                     <h2 className="gambarino-font text-7xl md:text-9xl text-white leading-none" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>
                         Panevino<br />Ristorante
