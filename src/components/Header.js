@@ -152,29 +152,19 @@ export default function Header() {
                                 key={item}
                                 href={href}
                                 className="relative px-3 py-1 hover:text-red-700 hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-red-700"
+                                onClick={() => setMenuOpen(false)}
                             >
                                 {item}
                             </Link>
                         );
                     })}
 
-                </div>
-
-                {/* Phone Button */}
-                <div className="p-4 space-y-4">
+                    {/* Facebook Button - moved here */}
                     <a
-                        href="tel:2395148655"
-                        className="block text-center bg-red-700 text-white font-bold text-lg py-3 rounded-md hover:bg-red-800 transition-colors"
-                    >
-                        (239) 514-8655
-                    </a>
-
-                    {/* Full Width Facebook Button */}
-                    <a
-                        href="https://facebook.com"
+                        href="https://www.facebook.com/PanevinoRistoranteNaples"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block text-center bg-blue-600 text-white font-bold text-lg py-3 rounded-md hover:bg-blue-700 transition-colors"
+                        className="block text-center bg-blue-600 text-white font-bold text-lg py-3 rounded-md hover:bg-blue-700 transition-colors mt-4"
                     >
                         Facebook
                     </a>

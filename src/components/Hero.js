@@ -22,6 +22,20 @@ export default function Hero() {
 
     return (
         <>
+            <style jsx>{`
+                @font-face {
+                    font-family: 'Gambarino-Regular';
+                    src: url('/fonts/Gambarino-Regular.woff2') format('woff2'),
+                         url('/fonts/Gambarino-Regular.woff') format('woff'),
+                         url('/fonts/Gambarino-Regular.ttf') format('truetype');
+                    font-weight: 400;
+                    font-display: swap;
+                    font-style: normal;
+                }
+                .gambarino-font {
+                    font-family: 'Gambarino-Regular', serif;
+                }
+            `}</style>
             <section className="w-full min-h-screen pt-20 relative flex items-start justify-center overflow-hidden">
 
             {/* Fallback Background */}
@@ -52,49 +66,19 @@ export default function Hero() {
                     />
                 </AnimatePresence>
 
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/60 z-10" />
-
-                {/* Content */}
+                {/* Bottom Left Text - Panevino Ristorante */}
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="relative z-20 text-center px-4 mt-[12vh] md:mt-[14vh]"
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                    className="absolute bottom-24 sm:bottom-8 left-4 sm:left-8 z-20 max-w-[90%] pb-4 sm:pb-0"
                 >
-                    <div className="inline-block bg-white/10 border border-white/30 backdrop-blur-[1px] px-4 py-5 md:px-6 md:py-6 rounded-lg shadow-xl">
-                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
-                            A Taste of Italy in the Heart of Naples
-                        </h1>
-                        <p className="text-base md:text-xl text-white mb-4">
-                            Panevino Ristorante welcomes you to an authentic Italian dining experience.
-                        </p>
-
-                        <p className="text-sm md:text-base text-gray-200 mb-1">
-                            The best Italian restaurant in Naples, Florida
-                        </p>
-
-                        <p className="text-sm md:text-base text-gray-300 mb-4">
-                            8853 Tamiami Trail N, Naples
-                        </p>
-
-                        {/* Desktop Buttons */}
-                        <div className="hidden sm:flex flex-col sm:flex-row gap-3 justify-center">
-                            <a
-                                href="#menu"
-                                className="inline-block px-6 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-md text-base transition-colors duration-300"
-                            >
-                                View Menu
-                            </a>
-                            <a
-                                href="#contact"
-                                className="inline-block px-6 py-3 border border-white text-white font-semibold rounded-md text-base transition-colors duration-300 hover:bg-white hover:text-primary"
-                            >
-                                Reserve Now
-                            </a>
-                        </div>
-                    </div>
-
+                    <h2 className="gambarino-font text-7xl md:text-9xl text-white leading-none" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>
+                        Panevino<br />Ristorante
+                    </h2>
+                    <p className="gambarino-font text-3xl md:text-5xl text-white mt-2 font-medium" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.25)' }}>
+                        A Taste of Italy in the Heart of Naples
+                    </p>
                 </motion.div>
             </section>
 
