@@ -38,9 +38,19 @@ export default function Contact() {
             <div className="container mx-auto px-4">
 
                 {/* Title */}
-                <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
                     Contact Panevino
                 </h2>
+
+                {/* Phone Number */}
+                <div className="text-center mb-8">
+                    <a
+                        href="tel:2395148655"
+                        className="text-2xl md:text-3xl font-semibold text-gray-800 hover:text-primary transition-colors duration-300"
+                    >
+                        (239) 514-8655
+                    </a>
+                </div>
 
                 {/* Full-width Google Map */}
                 <div className="w-full rounded-lg overflow-hidden shadow-md min-h-[400px] md:min-h-[600px]">
