@@ -1,0 +1,7 @@
+# Robots.txt for Panevino Ristorante Naples
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://panevinonaples.com/sitemap.xml
+Crawl-delay: 1

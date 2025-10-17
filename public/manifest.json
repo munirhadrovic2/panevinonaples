@@ -1,0 +1,22 @@
+{
+  "name": "Panevino Ristorante Naples",
+  "short_name": "Panevino",
+  "description": "Authentic Italian Restaurant in Naples, Florida since 1994",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8B0000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "restaurant", "dining"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
+

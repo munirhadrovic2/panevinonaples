@@ -1,8 +1,30 @@
 "use client";
 
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Awards() {
+    const reviewJson = {
+        '@context': 'https://schema.org',
+        '@type': 'Review',
+        itemReviewed: {
+            '@type': 'Restaurant',
+            name: 'Panevino Ristorante',
+            url: 'https://panevinonaples.com',
+        },
+        reviewBody: 'I have never eaten better Italian food, especially Chicken Scarparello.',
+        reviewRating: {
+            '@type': 'Rating',
+            ratingValue: '5',
+            bestRating: '5',
+            worstRating: '1'
+        },
+        author: {
+            '@type': 'Person',
+            name: 'Guest'
+        }
+    };
+
     return (
         <div>
             {/* Awards Section */}
@@ -168,6 +190,10 @@ export default function Awards() {
                     </div>
                 </div>
             </section>
+
+            <Script id="ld-json-review" type="application/ld+json" strategy="afterInteractive">
+                {JSON.stringify(reviewJson)}
+            </Script>
         </div>
     );
 }
