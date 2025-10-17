@@ -77,7 +77,7 @@ export default function Hero() {
                         Panevino<br />Ristorante
                     </h2>
                     <p className="gambarino-font text-3xl md:text-5xl text-white mt-2 font-medium" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.25)' }}>
-                        A Taste of Italy in the Heart of Naples
+                        A Taste of Italy in the Heart of Naples, since 1994
                     </p>
                 </motion.div>
             </section>
