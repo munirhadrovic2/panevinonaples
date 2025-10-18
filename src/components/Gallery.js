@@ -22,20 +22,23 @@ export default function Gallery({ images }) {
                     </p>
                 </div>
 
-                {/* Gallery Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {/* Masonry Gallery Grid */}
+                <div className="masonry-grid">
                     {images.map((filename, index) => (
                         <div
                             key={index}
-                            className="relative w-full h-72 rounded-lg overflow-hidden shadow-md group cursor-pointer"
+                            className="masonry-item group cursor-pointer"
                             onClick={() => setSelectedImage(`/images/gallery/${filename}`)}
                         >
-                            <Image
-                                src={`/images/gallery/${filename}`}
-                                alt={`Gallery Image ${index + 1}`}
-                                fill
-                                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
+                            <div className="relative w-full overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <Image
+                                    src={`/images/gallery/${filename}`}
+                                    alt={`Gallery Image ${index + 1}`}
+                                    width={600}
+                                    height={400}
+                                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -49,7 +52,7 @@ export default function Gallery({ images }) {
                 >
                     <div
                         className="relative max-w-4xl w-full p-4"
-                        onClick={(e) => e.stopPropagation()} // Prevent close when clicking image
+                        onClick={(e) => e.stopPropagation()}
                     >
                         <Image
                             src={selectedImage}
@@ -60,13 +63,45 @@ export default function Gallery({ images }) {
                         />
                         <button
                             onClick={() => setSelectedImage(null)}
-                            className="absolute top-4 right-4 text-white text-3xl font-bold"
+                            className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors"
                         >
                             &times;
                         </button>
                     </div>
                 </div>
             )}
+
+            <style jsx>{`
+                .masonry-grid {
+                    column-count: 1;
+                    column-gap: 1.5rem;
+                }
+
+                @media (min-width: 640px) {
+                    .masonry-grid {
+                        column-count: 2;
+                    }
+                }
+
+                @media (min-width: 1024px) {
+                    .masonry-grid {
+                        column-count: 3;
+                    }
+                }
+
+                @media (min-width: 1280px) {
+                    .masonry-grid {
+                        column-count: 4;
+                    }
+                }
+
+                .masonry-item {
+                    break-inside: avoid;
+                    margin-bottom: 1.5rem;
+                    display: inline-block;
+                    width: 100%;
+                }
+            `}</style>
         </section>
     );
 }
