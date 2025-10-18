@@ -32,31 +32,59 @@ export default function Awards() {
                 <div className="container mx-auto flex flex-col md:flex-row items-start gap-12">
 
                     {/* Left: Awards Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                        {[
-                            { src: "/images/awards/2025.png", alt: "Award 2025" },
-                            { src: "/images/awards/2024.png", alt: "Award 2024" },
-                            { src: "/images/awards/2024-2.jpeg", alt: "Award 2024" },
-                            { src: "/images/awards/2023.jpg", alt: "Award 2023" },
-                            { src: "/images/awards/2021.jpg", alt: "Award 2021" },
-                            { src: "/images/awards/slurpy.jpg", alt: "Award Slurpy 2021" },
-                            { src: "/images/awards/2020.jpg", alt: "Award 2020" },
-                            { src: "/images/awards/2019.jpg", alt: "Award 2019" },
-                            { src: "/images/awards/2018.jpg", alt: "Award 2018" },
-                        ].map((award, idx) => (
-                            <div
-                                key={idx}
-                                className="w-[180px] h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden"
-                            >
+                    <div className="flex flex-col gap-6">
+                        {/* First Row - Two Featured Awards (50/50 split) */}
+                        <div className="grid grid-cols-2 gap-6">
+                            <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
                                 <Image
-                                    src={award.src}
-                                    alt={award.alt}
-                                    width={180}
+                                    src="/images/awards/guru_cert.png"
+                                    alt="Guru 2024"
+                                    width={400}
                                     height={260}
-                                    className="object-cover w-full h-full"
+                                    className="object-contain w-full h-full"
                                 />
                             </div>
-                        ))}
+                            <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
+                                <Image
+                                    src="/images/awards/best_florida.jpg"
+                                    alt="Florida 2024"
+                                    width={400}
+                                    height={260}
+                                    className="object-contain w-full h-full"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Rest of Awards - Regular Grid */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                            {[
+                                { src: "/images/awards/lux_life.jpg", alt: "Award 2024" },
+                                { src: "/images/awards/2025.png", alt: "Award 2025" },
+                                { src: "/images/awards/2024.png", alt: "Award 2024" },
+                                { src: "/images/awards/2024-2.jpeg", alt: "Award 2024" },
+                                { src: "/images/awards/2024-guru.png", alt: "Guru 2024" },
+                                { src: "/images/awards/2023.jpg", alt: "Award 2023" },
+                                { src: "/images/awards/2021.jpg", alt: "Award 2021" },
+                                { src: "/images/awards/slurpy.jpg", alt: "Award Slurpy 2021" },
+                                { src: "/images/awards/2020.jpg", alt: "Award 2020" },
+                                { src: "/images/awards/2019.jpg", alt: "Award 2019" },
+                                { src: "/images/awards/2018.jpg", alt: "Award 2018" },
+                                { src: "/images/awards/2022cafebar.jpg", alt: "Award 2018" },
+                            ].map((award, idx) => (
+                                <div
+                                    key={idx}
+                                    className="w-[180px] h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden"
+                                >
+                                    <Image
+                                        src={award.src}
+                                        alt={award.alt}
+                                        width={180}
+                                        height={260}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Right: Awards Text Block */}
