@@ -101,16 +101,19 @@ export default function Awards() {
                                 A Tradition of Warm Hospitality
                             </h2>
                             <p className="text-lg text-secondary leading-relaxed mb-4">
-                                At Panevino Ristorante, our guests are more than just visitors — they are part of our extended family.
-                                Since opening our doors, we have built lasting relationships based on trust, warmth, and genuine care.
+                                Panevino (the name translates to bread and wine) has provided the best Northern Italian cuisine to the Naples area since early 1994.
                             </p>
                             <p className="text-lg text-secondary leading-relaxed mb-4">
-                                Every dish we serve is prepared with passion, and every interaction is filled with the spirit of true Italian hospitality.
-                                For us, creating unforgettable dining experiences is not just a mission — it’s a heartfelt tradition.
+                                Panevino is a minuscule, Northern Italian neighborhood charmer, most everything made from scratch with the finest ingredients in a word, &quot;Bellisimo.&quot;
+                            </p>
+                            <p className="text-lg text-secondary leading-relaxed mb-4">
+                                Panevino was many times given Best of Naples for local Business and mentioned in &quot;Best of the Best&quot; by the Naples Daily News. It has been written up by Dining & Doing.
+                            </p>
+                            <p className="text-lg text-secondary leading-relaxed mb-4">
+                                Chef invites all to enjoy such appetizers as seafood salad with octopus. Spedini romano. Shrimp scampi with lemon sauce; as well as entrees such as pasta, lobster raviolis, chicken scarpariello with sausage, potatoes in white wine. Veal Shank Osso bucco with homemade gnocci, mushrooms and brown gravy sauce. Dover sole fileted tableside. 7-bone baby veal chop contadina country style. Fresh Chilean sea bass. Bronzine. Veal chop Panevino topped with asparagus, melted fresh mozzarella white wine and many more succulent dishes.
                             </p>
                             <p className="text-lg text-secondary leading-relaxed mb-6">
-                                Whether you join us for a casual lunch or a special celebration, we are honored to share our table with you.
-                                Welcome to the Panevino family.
+                                Stop in and dine with us to find out why so many people agree the best Italian Restaurant in Naples is Panevino Ristorante.
                             </p>
 
                             {/* TripAdvisor and Restaurant Guru badges side-by-side */}
