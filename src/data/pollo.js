@@ -33,7 +33,7 @@ export const chickenItems = [
         title: "POLLO CAPRICCIOSA",
         description: "breaded chicken topped with mix salad, chopped tomato, mozzarella, fresh squeeze lemon juice extra virgen olive oil",
         price: "$28.95",
-        image: "/images/pollo/capricciosa.jpg",
+        image: "/images/pollo/pollo-caprocciosa.jpg",
     },
     {
         title: "POLLO SORRENTINO",

@@ -12,7 +12,7 @@ export const hotItems = [
         price: "$16.95",
     },
     {
-        image: "/images/antipasti/cozze-luciano.jpg",
+        image: "/images/antipasti/coze-luciano.jpg",
         title: "COZZE LUCIANO",
         description: "mussels in white wine, garlic, extra-virgin olive oil sauce",
         price: "$16.95",
