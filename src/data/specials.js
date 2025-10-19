@@ -1,7 +1,7 @@
 export const specialsItems = [
     {
-        title: "CHILEAN SEA BASS",
-        description: "bed of spinach, sun-dried tomato, artichoke, and white wine lemon sauce",
+        title: "CHILEAN SEA BASS FANTASIA",
+        description: "sauteed and served with sun-dried tomato, capers, and white wine lemon sauce",
         image: "/images/specials/chilean-sea-bass.jpg",
     },
     // {
