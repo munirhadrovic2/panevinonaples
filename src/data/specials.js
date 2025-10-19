@@ -100,7 +100,7 @@ export const specialsItems = [
         image: "/images/specials/veal-chop-contandina.jpg",
     },
     {
-        title: "LOBSTER TAIL MARECHIARA",
+        title: "LOBSTER TAIL MARECHIARA (LIMITED AVAILABILITY)",
         description: "Lobster tail served with clams, mussels, shrimp, linguine pasta in lite marinara sauce",
         image: "/images/specials/lobster-tail.jpg",
     },
