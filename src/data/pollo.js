@@ -110,6 +110,12 @@ export const vealItems = [
         price: "$46.95",
         image: "/images/pollo/royale.jpg",
     },
+    {
+        title: "VEAL SORENTINO",
+        description: "veal topped with prosciutto, eggplant, mozzarella, white wine sauce",
+        price: "$35.95",
+        image: "/images/pollo/sorrentino.jpg",
+    },
 ]
 
 export const parmigianaItems = [
