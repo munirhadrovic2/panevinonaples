@@ -36,7 +36,7 @@ export const hotItems = [
         price: "$17.95",
     },
     {
-        image: "/images/antipasti/portabello-roasted-peppers.jpg",
+        image: "/images/antipasti/portobello.jpg",
         title: "PORTOBELLO ROASTED PEPPERS",
         description: "grilled portobello, roasted peppers and balsamic vinaigrette",
         price: "$17.95",
