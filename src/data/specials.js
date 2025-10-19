@@ -85,7 +85,7 @@ export const specialsItems = [
     //     image: "/images/specials/portabello.jpg",
     // },
     {
-        title: "SALMON OREGANATA",
+        title: "SALMON OREGANATA (LIMITED AVAILABILITY)",
         description: "Wild Alaskan Salmon with bread-crumbs, grilled and served on a bed of Sauteed Spinach in Garlic-Oil, topped with a touch of Lemon-White Wine sauce",
         image: "/images/specials/salmon-organetta.jpg",
     },
@@ -95,7 +95,7 @@ export const specialsItems = [
         image: "/images/specials/veal-chop-capricioza.jpg",
     },
     {
-        title: "VEAL CHOP CONTANDINA",
+        title: "VEAL CHOP CONTANDINA (LIMITED AVAILABILITY)",
         description: "Rock of Veal Chop grilled and topped with sauteed Sliced Potatoes, Onions, Mushrooms and Mixed Bell Peppers",
         image: "/images/specials/veal-chop-contandina.jpg",
     },
