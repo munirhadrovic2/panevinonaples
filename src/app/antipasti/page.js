@@ -30,21 +30,11 @@ export default function AntipastiPage() {
                     offering a perfect introduction to your Panevino dining experience.
                 </p>
 
-                {/* Hot and Cold Items */}
-                <div className="grid md:grid-cols-2 gap-12">
-                    {/* Hot Antipasti */}
-                    <div>
-                        <h2 className="text-2xl font-bold text-primary mb-6">
-                            Antipasti (Caldi - Hot)
-                        </h2>
-                        <div className="grid gap-6">
-                            {hotItems.map((item, index) => (
-                                <FoodCard key={index} item={item} onClick={() => openModal(item.image)} />
-                            ))}
-                        </div>
-                    </div>
-
-
+                {/* Antipasti Items */}
+                <div className="grid md:grid-cols-2 gap-8">
+                    {hotItems.map((item, index) => (
+                        <FoodCard key={index} item={item} onClick={() => openModal(item.image)} />
+                    ))}
                 </div>
 
                 {/* Modal */}

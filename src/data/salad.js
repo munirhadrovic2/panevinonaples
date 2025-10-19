@@ -39,19 +39,19 @@ export const saladItems = [
         title: "BRESAOLA",
         description: "thin sliced dry smoked filet mignon with arugula shaved parmigiana cheese",
         price: "$16.95",
-        image: "/images/salad/bresaola.jpg",
+        image: "/images/antipasti/bresola.jpg",
     },
     {
         title: "PROSCIUTTO MELON",
         description: "fresh, ripe melon with sliced prosciutto on top",
         price: "$14.95",
-        image: "/images/salad/prosciutto.jpg",
+        image: "/images/antipasti/prosciutto-melon.jpg",
     },
     {
         title: "CARPACCIO",
         description: "thin sliced raw filet mignon with arugula, shaved parmigiana cheese",
         price: "$16.95",
-        image: "/images/salad/carpaccio.jpg",
+        image: "/images/antipasti/carpaccio.jpg",
     },
     {
         title: "CAPRESE",
