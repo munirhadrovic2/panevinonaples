@@ -51,13 +51,19 @@ export const pastaItems = [
         title: "PENNE PANEVINO",
         description: "sundried tomato, mushrooms, spinach in virgin oil and garlic",
         price: "$29.95",
-        image: "/images/pasta/san-remo.jpg",
+        image: "/images/pasta/penne-panevino.jpg",
     },
     {
-        title: "LINGUINE WHITE OR RED CLAM SAUCE",
-        description: "linguine with White or Red Clam sauce (Fresh Clams)",
+        title: "LINGUINE WHITE CLAM SAUCE",
+        description: "linguine with White sauce (Fresh Clams)",
         price: "$31.95",
         image: "/images/pasta/white-clam.jpg",
+    },
+    {
+        title: "LINGUINE RED CLAM SAUCE",
+        description: "linguine with Red sauce (Fresh Clams)",
+        price: "$31.95",
+        image: "/images/pasta/red-clam.jpg",
     },
     {
         title: "RIGATONI AMATRICIANA",
