@@ -69,7 +69,7 @@ export const pastaItems = [
         title: "PASTA MEAT SAUCE (BOLOGNESE)",
         description: "homemade meat sauce (veal), mushrooms, touch of cream",
         price: "$30.95",
-        image: "/images/pasta/marinara.jpg",
+        image: "/images/pasta/bolognesse.jpg",
     },
     {
         title: "CAPELLINI PRIMAVERA",
