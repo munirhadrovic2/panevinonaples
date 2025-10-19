@@ -42,7 +42,7 @@ export const hotItems = [
         price: "$17.95",
     },
     {
-        image: "/images/antipasti/vongole-posilipo.jpg",
+        image: "/images/pasta/red-clam.jpg",
         title: "VONGOLE POSILIPO",
         description: "fresh clams with lite marinara sauce",
         price: "$17.95",
