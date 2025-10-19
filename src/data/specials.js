@@ -2,6 +2,11 @@ export const specialsItems = [
     {
         title: "CHILEAN SEA BASS FANTASIA",
         description: "sauteed and served with sun-dried tomato, capers, and white wine lemon sauce",
+        image: "/images/specials/chilean-seabass-fantasia.jpg",
+    },
+    {
+        title: "CHILEAN SEA BASS GARLIC AND OIL",
+        description: "grilled Chilean Sea Bass served with spaghetti sun-dried tomato, virgin olive oil, and garlic",
         image: "/images/specials/chilean-sea-bass.jpg",
     },
     // {
