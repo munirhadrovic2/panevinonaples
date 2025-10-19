@@ -8,7 +8,7 @@ import { faPrint } from "@fortawesome/free-solid-svg-icons";
 export default function Menu() {
     const menuItems = [
         { title: "Antipasti", image: "/images/menu/antipasti.jpg", link: "/antipasti" },
-        { title: "Salad", image: "/images/menu/salad.jpg", link: "/salad" },
+        { title: "Salad and Antipasti (Cold)", image: "/images/menu/salad.jpg", link: "/salad" },
         { title: "Pasta", image: "/images/menu/pasta.jpg", link: "/pasta" },
         { title: "Pollo (Chicken), Vitello (Veal), and Parmigiana", image: "/images/menu/pollo.jpg", link: "/pollo" },
         { title: "Seafood", image: "/images/menu/seafood.jpg", link: "/seafood" },

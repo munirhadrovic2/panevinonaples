@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { hotItems, coldItems } from "@/data/antipasti";
+import { hotItems } from "@/data/antipasti";
 import FoodCard from "@/components/FoodCard";
 
 export default function AntipastiPage() {
@@ -44,17 +44,7 @@ export default function AntipastiPage() {
                         </div>
                     </div>
 
-                    {/* Cold Antipasti */}
-                    <div>
-                        <h2 className="text-2xl font-bold text-primary mb-6">
-                            Antipasti (Fredi - Cold)
-                        </h2>
-                        <div className="grid gap-6">
-                            {coldItems.map((item, index) => (
-                                <FoodCard key={index} item={item} onClick={() => openModal(item.image)} />
-                            ))}
-                        </div>
-                    </div>
+
                 </div>
 
                 {/* Modal */}

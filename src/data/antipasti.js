@@ -55,35 +55,4 @@ export const hotItems = [
     },
 ]
 
-export const coldItems = [
-    {
-        image: "/images/salad/bruschetta.jpg",
-        title: "BRUSCHETTA POMODORO",
-        description: "toasted bread with chopped tomato and basil on top",
-        price: "$11.95",
-    },
-    {
-        image: "/images/antipasti/bresaola.jpg",
-        title: "BRESAOLA",
-        description: "thin sliced dry smoked filet mignon with arugula shaved parmigiana cheese",
-        price: "$16.95",
-    },
-    {
-        image: "/images/antipasti/prosciutto-melon.jpg",
-        title: "PROSCIUTTO MELON",
-        description: "fresh, ripe melon with sliced prosciutto on top",
-        price: "$14.95",
-    },
-    {
-        image: "/images/antipasti/carpaccio.jpg",
-        title: "CARPACCIO",
-        description: "thin sliced raw filet mignon with arugula, shaved parmigiana cheese",
-        price: "$16.95",
-    },
-    {
-        image: "/images/antipasti/caprese.jpg",
-        title: "CAPRESE",
-        description: "homemade fresh mozzarella, tomatoes and roasted peppers",
-        price: "$16.95",
-    },
-]
+
