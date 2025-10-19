@@ -6,7 +6,7 @@ export const hotItems = [
         price: "$17.95",
     },
     {
-        image: "/images/antipasti/rollatini.jpg",
+        image: "/images/specials/stuffed-eggplant.jpg",
         title: "EGGPLANT ROLLATINI",
         description: "eggplant stuffed with sun dried tomato, ricotta cheese, spinach, topped with melted provolone and pink sauce",
         price: "$17.95",
