@@ -94,4 +94,9 @@ export const specialsItems = [
         description: "Lobster tail served with clams, mussels, shrimp, linguine pasta in lite marinara sauce",
         image: "/images/specials/lobster-tail.jpg",
     },
+    {
+        title: "BRONZINO",
+        description: "Bronzino is butterflied Italian fish. It's served plain grilled with chopped garlic, squeezed lemon juice and virgin olive oil on top",
+        image: "/images/specials/bronzino.jpg",
+    },
 ];
