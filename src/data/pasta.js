@@ -124,7 +124,7 @@ export const homemadePastaItems = [
     },
     {
         title: "FUSILLI GAETA",
-        description: "tricolor fusilli with chicken, mushrooms, olives, onions, gaeta sauce with touch of marinara sauce",
+        description: "tricolor fusilli with chicken, mushrooms, olives, onions, marinara sauce with a touch of cream",
         price: "$29.95",
         image: "/images/pasta/fusilli.jpg",
     },
