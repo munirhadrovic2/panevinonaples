@@ -59,11 +59,11 @@ export const specialsItems = [
     //     description: "Two egg-battered Slices of Bread, Pan-Fried and stuffed with Mozzarella sauteed in a Light Marinara Sauce",
     //     image: "/images/specials/spredini-romano.jpg",
     // },
-    {
-        title: "MUSSELS LUCIANO",
-        description: "Mussels sauteed in a White Wine and Garlic Oil Sauce with Herbs & Spices",
-        image: "/images/specials/mussels-luciano.jpg",
-    },
+    // {
+    //     title: "MUSSELS LUCIANO",
+    //     description: "Mussels sauteed in a White Wine and Garlic Oil Sauce with Herbs & Spices",
+    //     image: "/images/specials/mussels-luciano.jpg",
+    // },
     // {
     //     title: "PASTA BOLOGNESE",
     //     description: "Homemade Meat sauce made of lean ground Veal with sliced Mushrooms and a Touch of Cream served With Homemade Pasta",
