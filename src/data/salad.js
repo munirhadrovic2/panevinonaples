@@ -24,7 +24,7 @@ export const saladItems = [
         image: "/images/salad/rughetta.jpg",
     },
     {
-        title: "Buratta Ssalad",
+        title: "BURATTA SALAD",
         description: "buratta cheese with cherry tomato and vinegrette glaze",
         price: "$16.95",
         image: "/images/salad/buratta.jpg",

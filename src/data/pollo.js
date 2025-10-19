@@ -129,7 +129,7 @@ export const parmigianaItems = [
         title: "POLLO/EGGPLANT PARMIGIANA",
         description: "breaded chicken topped with eggplant and pink sauce, melted mozzarella on top, served with pasta pink sauce",
         price: "$32.95",
-        image: "/images/pollo/combo.jpg",
+        image: "/images/pollo/eggplant-parmigiana.jpg",
     },
     {
         title: "VEAL PARMIGIANA",

@@ -6,7 +6,7 @@ export const hotItems = [
         price: "$17.95",
     },
     {
-        image: "/images/antipasti/eggplant-rollatini.jpg",
+        image: "/images/antipasti/rollatini.jpg",
         title: "EGGPLANT ROLLATINI",
         description: "eggplant stuffed with sun dried tomato, ricotta cheese, spinach, topped with melted provolone and pink sauce",
         price: "$17.95",
@@ -48,7 +48,7 @@ export const hotItems = [
         price: "$17.95",
     },
     {
-        image: "/images/antipasti/meatballs-marinara.jpg",
+        image: "/images/antipasti/meat-balls-marinara.jpg",
         title: "MEAT BALLS MARINARA (2 PIECES)",
         description: "",
         price: "$13.95",
@@ -57,7 +57,7 @@ export const hotItems = [
 
 export const coldItems = [
     {
-        image: "/images/antipasti/bruschetta-pomodoro.jpg",
+        image: "/images/salad/bruschetta.jpg",
         title: "BRUSCHETTA POMODORO",
         description: "toasted bread with chopped tomato and basil on top",
         price: "$11.95",
