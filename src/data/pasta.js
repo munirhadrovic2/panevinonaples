@@ -142,7 +142,7 @@ export const homemadePastaItems = [
     },
     {
         title: "FETTUCCINE SALVATORE",
-        description: "fettucine with Alfredo sauce / Add shrimp $8.95 or chicken, $6.95",
+        description: "fettuccine with sun dried tomato, mushrooms, Alfredo sauce",
         price: "$29.95",
         image: "/images/pasta/fetuccine-salvatore.jpg",
     },
