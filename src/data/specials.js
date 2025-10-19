@@ -54,11 +54,11 @@ export const specialsItems = [
         description: "Octopus with Chopped Celery and sliced Onions topped with a Shrimp, fresh Lemon, touch of Olive Oil dressing served on a bed of mix field green salad",
         image: "/images/specials/seafood-salad.jpg",
     },
-    {
-        title: "SPREDINI ROMANO",
-        description: "Two egg-battered Slices of Bread, Pan-Fried and stuffed with Mozzarella sauteed in a Light Marinara Sauce",
-        image: "/images/specials/spredini-romano.jpg",
-    },
+    // {
+    //     title: "SPREDINI ROMANO",
+    //     description: "Two egg-battered Slices of Bread, Pan-Fried and stuffed with Mozzarella sauteed in a Light Marinara Sauce",
+    //     image: "/images/specials/spredini-romano.jpg",
+    // },
     {
         title: "MUSSELS LUCIANO",
         description: "Mussels sauteed in a White Wine and Garlic Oil Sauce with Herbs & Spices",
@@ -69,11 +69,11 @@ export const specialsItems = [
     //     description: "Homemade Meat sauce made of lean ground Veal with sliced Mushrooms and a Touch of Cream served With Homemade Pasta",
     //     image: "/images/specials/pasta-bolognese.jpg",
     // },
-    {
-        title: "CHICKEN SCARPARIELLO",
-        description: "Chunks of boneless Chicken breast, Sweet Italian Sausage and Sliced Potatoes with garlic Oil, sauteed in a Lemon-White sauce",
-        image: "/images/specials/chicken-scarpariello.jpg",
-    },
+    // {
+    //     title: "CHICKEN SCARPARIELLO",
+    //     description: "Chunks of boneless Chicken breast, Sweet Italian Sausage and Sliced Potatoes with garlic Oil, sauteed in a Lemon-White sauce",
+    //     image: "/images/specials/chicken-scarpariello.jpg",
+    // },
     {
         title: "RAVIOLI WITH LOBSTER",
         description: "Homemade Cheese-Stuffed Ravioli served in a Pink Sauce topped with chunks of Lobster Meat",
