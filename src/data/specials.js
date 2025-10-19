@@ -109,4 +109,9 @@ export const specialsItems = [
         description: "Bronzino is butterflied Italian fish. It's served plain grilled with chopped garlic, squeezed lemon juice and virgin olive oil on top",
         image: "/images/specials/bronzino.jpg",
     },
+    {
+        title: "VEAL CHOP PANEVINO",
+        description: "regular veal chop pounded veal chop, breaded, topped with aspagus melted with mozzarella, grano padano and sauteed in white wine lemon sauce",
+        image: "/images/specials/veal-chop-panevino.jpg",
+    },
 ];
