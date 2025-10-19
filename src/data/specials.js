@@ -75,7 +75,7 @@ export const specialsItems = [
     //     image: "/images/specials/portabello.jpg",
     // },
     {
-        title: "SALMON ORGANETTA",
+        title: "SALMON OREGANATA",
         description: "Wild Alaskan Salmon with bread-crumbs, grilled and served on a bed of Sauteed Spinach in Garlic-Oil, topped with a touch of Lemon-White Wine sauce",
         image: "/images/specials/salmon-organetta.jpg",
     },
