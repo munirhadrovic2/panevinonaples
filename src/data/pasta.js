@@ -140,4 +140,10 @@ export const homemadePastaItems = [
         price: "$27.95",
         image: "/images/pasta/ravioli.jpg",
     },
+    {
+        title: "FETTUCCINE SALVATORE",
+        description: "fettucine with Alfredo sauce / Add shrimp $8.95 or chicken, $6.95",
+        price: "$29.95",
+        image: "/images/pasta/fetuccine-salvatore.jpg",
+    },
 ]
