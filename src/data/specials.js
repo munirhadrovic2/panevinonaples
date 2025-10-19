@@ -122,6 +122,6 @@ export const specialsItems = [
     {
         title: "MANSON FISH",
         description: "bad of spinach, topped with grilled sliced tomato in picata sauce",
-        image: "/images/specials/salmon-picata.jpg",
+        image: "/images/specials/manson-fish.jpg",
     },
 ];
