@@ -114,4 +114,9 @@ export const specialsItems = [
         description: "regular veal chop pounded, breaded, topped with aspagus melted mozzarella, grano padano and sauteed in white wine lemon sauce",
         image: "/images/specials/veal-chop-panevino.jpg",
     },
+    {
+        title: "SALMON MR SMITH",
+        description: "bad of spinach, capers, and white wine lemon sauce",
+        image: "/images/specials/salmon-picata.jpg",
+    },
 ];
