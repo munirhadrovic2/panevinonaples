@@ -9,6 +9,11 @@ export const specialsItems = [
         description: "grilled Chilean Sea Bass served with spaghetti sun-dried tomato, virgin olive oil, and garlic",
         image: "/images/specials/chilean-sea-bass.jpg",
     },
+    {
+        title: "CHILEAN SEA BASS PANEVINO",
+        description: "bed of spinach sun-dried tomato, artichokes, and white wine lemon sauce",
+        image: "/images/specials/seabass-panevino.jpg",
+    },
     // {
     //     title: "RAVIOLI STUFFED WITH LOBSTER",
     //     description: "chopped tarragon, basil, garlic in lite cream sauce and chopped tomato",
