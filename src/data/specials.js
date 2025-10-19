@@ -111,7 +111,7 @@ export const specialsItems = [
     },
     {
         title: "VEAL CHOP PANEVINO",
-        description: "regular veal chop pounded veal chop, breaded, topped with aspagus melted with mozzarella, grano padano and sauteed in white wine lemon sauce",
+        description: "regular veal chop pounded, breaded, topped with aspagus melted mozzarella, grano padano and sauteed in white wine lemon sauce",
         image: "/images/specials/veal-chop-panevino.jpg",
     },
 ];
