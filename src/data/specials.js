@@ -115,12 +115,12 @@ export const specialsItems = [
         image: "/images/specials/veal-chop-panevino.jpg",
     },
     {
-        title: "SALMON MR SMITH",
+        title: "SALMON MR SMITH STYLE",
         description: "bad of spinach, capers, and white wine lemon sauce",
         image: "/images/specials/salmon-picata.jpg",
     },
     {
-        title: "MANSON FISH",
+        title: "MANSON FISH STYLE",
         description: "bad of spinach, topped with grilled sliced tomato in picata sauce",
         image: "/images/specials/manson-fish.jpg",
     },
