@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
+import Analytics from "@/components/Analytics";
+import { Suspense } from 'react';
 
 export const viewport = {
     themeColor: '#8B0000',
@@ -140,21 +142,26 @@ export default function RootLayout({ children }) {
         <html lang="en" className={playfair.className}>
         <body className="font-sans">
 
-        {/* Google Analytics */}
+        {/* Google Analytics 4 */}
         <Script
-            src="https://www.googletagmanager.com/gtag/js?id=UA-33579037-1"
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZY4D100SNY"
             strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="ga4-setup" strategy="afterInteractive">
             {`
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
+                function gtag(){dataLayer.push(arguments);} 
                 gtag('js', new Date());
-                gtag('config', 'UA-33579037-1');
+                // Disable automatic page_view for SPA, we'll send it manually on route change
+                gtag('config', 'G-ZY4D100SNY', { send_page_view: false });
             `}
         </Script>
 
         <Header />
+        {/* Track page views on route changes */}
+        <Suspense fallback={null}>
+            <Analytics measurementId="G-ZY4D100SNY" />
+        </Suspense>
         {children}
         <Footer />
         <Script id="ld-json-restaurant" type="application/ld+json" strategy="afterInteractive">
