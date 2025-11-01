@@ -42,10 +42,10 @@ export const pastaItems = [
         image: "/images/pasta/carbonara.jpg",
     },
     {
-        title: "SPAGHETTI PUTANESCA",
+        title: "SPAGHETTI PUTTANESCA",
         description: "anchovy filets chopped, olives, basil in lite tomato sauce",
         price: "$28.95",
-        image: "/images/pasta/putanesca.jpg",
+        image: "/images/pasta/puttanesca.jpg",
     },
     {
         title: "PENNE PANEVINO",
