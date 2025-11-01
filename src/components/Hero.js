@@ -103,6 +103,20 @@ export default function Hero() {
                 .gambarino-font {
                     font-family: 'Gambarino-Regular', serif;
                 }
+                /* Hero slide background behavior */
+                .hero-slide {
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                @media (max-width: 767px) {
+                    /* On mobile, keep image height at 100% to reduce zoom */
+                    .hero-slide {
+                        background-size: auto 100%;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                    }
+                }
             `}</style>
             <section
                 className="w-full min-h-screen pt-20 relative flex items-start justify-center overflow-hidden bg-black"
@@ -126,7 +140,7 @@ export default function Hero() {
                             x: { type: "tween", duration: 0.5, ease: "easeInOut" },
                             opacity: { duration: 0.5 }
                         }}
-                        className="absolute inset-0 bg-cover bg-center"
+                        className="absolute inset-0 bg-center hero-slide"
                         style={{
                             backgroundImage: `url('${heroImages[currentImage]}')`,
                             zIndex: 1,
