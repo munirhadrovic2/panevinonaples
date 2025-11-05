@@ -103,33 +103,48 @@ export default function Hero() {
                 .gambarino-font {
                     font-family: 'Gambarino-Regular', serif;
                 }
-                /* Hero slide background behavior */
-                .hero-slide {
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    width: 100vw;
-                    left: 50%;
-                    right: 50%;
-                    margin-left: -50vw;
-                    margin-right: -50vw;
+                /* Full-width and full-height hero on desktop */
+                @media (min-width: 768px) {
+                    .hero-section {
+                        position: relative;
+                        width: 100vw;
+                        height: 100vh;
+                        left: 50%;
+                        right: 50%;
+                        margin-left: -50vw;
+                        margin-right: -50vw;
+                        padding-top: 0;
+                    }
+                    /* Hero slide background behavior - full cover on desktop */
+                    .hero-slide {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: cover !important;
+                        background-position: center !important;
+                        background-repeat: no-repeat !important;
+                    }
                 }
+                /* Mobile styles */
                 @media (max-width: 767px) {
+                    .hero-section {
+                        position: relative;
+                        width: 100%;
+                        min-height: 100vh;
+                        padding-top: 80px;
+                    }
                     /* On mobile, keep image height at 100% to reduce zoom */
                     .hero-slide {
                         background-size: auto 100%;
                         background-position: center center;
                         background-repeat: no-repeat;
-                        width: 100%;
-                        left: 0;
-                        right: 0;
-                        margin-left: 0;
-                        margin-right: 0;
                     }
                 }
             `}</style>
             <section
-                className="w-full min-h-screen pt-20 relative flex items-start justify-center overflow-hidden bg-black"
+                className="hero-section flex items-start justify-center overflow-hidden bg-black"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onTouchStart={onTouchStart}
@@ -150,12 +165,17 @@ export default function Hero() {
                             x: { type: "tween", duration: 0.5, ease: "easeInOut" },
                             opacity: { duration: 0.5 }
                         }}
-                        className="absolute inset-0 bg-center hero-slide"
-                        style={{
-                            backgroundImage: `url('${heroImages[currentImage]}')`,
-                            zIndex: 1,
-                        }}
-                    />
+                        className="absolute inset-0 hero-slide"
+                        style={{ zIndex: 1 }}
+                    >
+                        <img
+                            src={heroImages[currentImage]}
+                            alt="Panevino Hero"
+                            className="w-full h-full object-cover"
+                            style={{ width: '100vw', height: '100vh' }}
+                            draggable={false}
+                        />
+                    </motion.div>
                 </AnimatePresence>
 
                 {/* Left Arrow */}
