@@ -108,6 +108,11 @@ export default function Hero() {
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
+                    width: 100vw;
+                    left: 50%;
+                    right: 50%;
+                    margin-left: -50vw;
+                    margin-right: -50vw;
                 }
                 @media (max-width: 767px) {
                     /* On mobile, keep image height at 100% to reduce zoom */
@@ -115,6 +120,11 @@ export default function Hero() {
                         background-size: auto 100%;
                         background-position: center center;
                         background-repeat: no-repeat;
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        margin-left: 0;
+                        margin-right: 0;
                     }
                 }
             `}</style>
