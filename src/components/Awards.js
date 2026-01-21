@@ -33,8 +33,17 @@ export default function Awards() {
 
                     {/* Left: Awards Grid */}
                     <div className="flex flex-col gap-6">
-                        {/* First Row - Two Featured Awards (50/50 split) */}
-                        <div className="grid grid-cols-2 gap-6">
+                        {/* First Row - Featured Awards */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
+                                <Image
+                                    src="/images/awards/award-google-2025.png"
+                                    alt="Google Award 2025"
+                                    width={400}
+                                    height={260}
+                                    className="object-contain w-full h-full"
+                                />
+                            </div>
                             <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
                                 <Image
                                     src="/images/awards/guru_cert.png"
