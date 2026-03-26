@@ -100,6 +100,19 @@ export default function Footer() {
                     &copy; {new Date().getFullYear()} <span itemProp="name">Panevino Ristorante</span>. All rights reserved.
                 </div>
 
+                {/* Powered By */}
+                <div className="text-center text-xs text-gray-400 mt-3 tracking-wide">
+                    Powered by{" "}
+                    <a
+                        href="https://metronoms.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-600 transition-colors duration-200 underline underline-offset-2"
+                    >
+                        Metronoms
+                    </a>
+                </div>
+
             </div>
         </footer>
     );
