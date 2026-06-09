@@ -171,13 +171,15 @@ export default function RootLayout({ children }) {
             src="https://www.googletagmanager.com/gtag/js?id=G-ZY4D100SNY"
             strategy="afterInteractive"
         />
-        <Script id="ga4-setup" strategy="afterInteractive">
+        <Script id="gtag-setup" strategy="afterInteractive">
             {`
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);} 
+                function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 // Disable automatic page_view for SPA, we'll send it manually on route change
                 gtag('config', 'G-ZY4D100SNY', { send_page_view: false });
+                // Google Ads
+                gtag('config', 'AW-829999246');
             `}
         </Script>
 
