@@ -4,6 +4,7 @@ import { pastaItems, homemadePastaItems } from "@/data/pasta";
 import { chickenItems, vealItems, parmigianaItems } from "@/data/pollo";
 import { seafoodItems } from "@/data/seafood";
 import { specialsItems } from "@/data/specials";
+import { awardNames } from "@/data/awards";
 
 export const SITE_URL = "https://panevinonaples.com";
 export const SITE_NAME = "Panevino Ristorante Naples";
@@ -158,18 +159,7 @@ export const restaurantJsonLd = {
             ],
             acceptsReservations: true,
             foundingDate: "1994",
-            // Matches the badges shown in the Awards section
-            award: [
-                "Naples Award Program Best of Naples 2018 and 2023",
-                "Naples Award Program Business Hall of Fame 2019, 2020, 2021 and 2024",
-                "LUXlife Restaurant & Bar Awards 2022: Most Authentic Italian Restaurant",
-                "LUXlife Culinary Excellence 2022: Northern Italian Cuisine",
-                "Guide to Florida Best of Florida 2023, Honorable Mention",
-                "Restaurantji Certificate of Excellence 2024",
-                "Restaurant Guru Recommended 2024 and 2025",
-                "BusinessRate Top 3 Italian Restaurants in Naples 2025",
-                "Sluurpy Recommended 2021",
-            ],
+            award: awardNames(), // from src/data/awards.js
             sameAs: [
                 "https://www.facebook.com/PanevinoRistoranteNaples",
                 "https://www.tripadvisor.com/Restaurant_Review-g34467-d393353-Reviews-Panevino_Ristorante_Naples-Naples_Florida.html",

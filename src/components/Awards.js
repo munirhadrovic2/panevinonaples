@@ -1,109 +1,157 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { awards, awardAlt } from "@/data/awards";
+
+const firstAwardYear = Math.min(...awards.map((award) => award.year));
+
+function AwardTile({ award, onOpen, isClone = false }) {
+    return (
+        <button
+            type="button"
+            onClick={() => onOpen(award)}
+            tabIndex={isClone ? -1 : undefined}
+            className="group block w-32 md:w-36 text-center focus:outline-none"
+        >
+            <span className="relative block h-44 md:h-48 rounded-md bg-white shadow-sm ring-1 ring-black/5 transition duration-300 group-hover:-translate-y-1 group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-primary">
+                <Image
+                    src={award.src}
+                    alt={isClone ? "" : awardAlt(award)}
+                    fill
+                    sizes="144px"
+                    className="object-contain p-3"
+                />
+            </span>
+            <span className="mt-2 block text-xs font-medium tracking-wide text-gray-500">
+                {award.year}
+            </span>
+        </button>
+    );
+}
 
 export default function Awards() {
+    const [selectedAward, setSelectedAward] = useState(null);
+
+    useEffect(() => {
+        if (!selectedAward) return;
+        const closeOnEscape = (e) => e.key === "Escape" && setSelectedAward(null);
+        document.addEventListener("keydown", closeOnEscape);
+        return () => document.removeEventListener("keydown", closeOnEscape);
+    }, [selectedAward]);
+
     return (
         <div>
             {/* Awards Section */}
             <section className="w-full py-20 bg-white">
-                <div className="container mx-auto flex flex-col md:flex-row items-start gap-12">
+                <div className="container mx-auto">
 
-                    {/* Left: Awards Grid */}
-                    <div className="flex flex-col gap-6">
-                        {/* First Row - Featured Awards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                            <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
-                                <Image
-                                    src="/images/awards/award-google-2025.png"
-                                    alt="BusinessRate Top 3 2025 Italian Restaurant award based on Google reviews, Naples FL"
-                                    width={400}
-                                    height={260}
-                                    className="object-contain w-full h-full"
-                                />
-                            </div>
-                            <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
-                                <Image
-                                    src="/images/awards/guru_cert.png"
-                                    alt="Restaurant Guru Recommended 2024 certificate for Panevino Ristorante"
-                                    width={400}
-                                    height={260}
-                                    className="object-contain w-full h-full"
-                                />
-                            </div>
-                            <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
-                                <Image
-                                    src="/images/awards/best_florida.jpg"
-                                    alt="Guide to Florida Best of Florida 2023 Honorable Mention ribbon badge"
-                                    width={400}
-                                    height={260}
-                                    className="object-contain w-full h-full"
-                                />
-                            </div>
+                    <div className="grid gap-8 md:grid-cols-12 md:gap-16">
+                        {/* Left: Heading + Intro */}
+                        <div className="md:col-span-5">
+                            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                                Award-winning since {firstAwardYear}
+                            </p>
+                            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+                                The Best Italian Restaurant in Naples, Florida <span className="font-extrabold">To Dine</span>
+                            </h2>
+                            <p className="text-lg text-secondary leading-relaxed mb-4">
+                                How it all came to be...
+                            </p>
+                            <p className="text-lg text-secondary leading-relaxed mb-4">
+                                The <strong>Naples</strong> area dining scene is better than ever. <strong>Panevino</strong> is a family-owned <strong>Northern Italian Restaurant</strong> serving <strong>North Naples</strong> since 1994.
+                            </p>
+                            <blockquote className="border-l-4 border-primary pl-4 italic text-secondary">
+                                One of our reviews: &quot;I have never eaten better Italian food, especially Chicken Scarparello.&quot;
+                            </blockquote>
                         </div>
 
-                        {/* Rest of Awards - Regular Grid */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                            {[
-                                { src: "/images/awards/lux_life.jpg", alt: "LUXlife Magazine 2022 Culinary Excellence certificate for Northern Italian Cuisine" },
-                                { src: "/images/awards/2025.png", alt: "Restaurant Guru Recommended 2025 badge for Panevino Ristorante" },
-                                { src: "/images/awards/2024.png", alt: "Restaurantji Certificate of Excellence 2024 award for Panevino Ristorante" },
-                                { src: "/images/awards/2024-2.jpeg", alt: "Naples Award Program Best of 2024 Business Hall of Fame plaque, 7 consecutive years" },
-                                { src: "/images/awards/2024-guru.png", alt: "Restaurant Guru Recommended 2024 badge for Panevino Ristorante" },
-                                { src: "/images/awards/2023.jpg", alt: "Naples Award Program Best of 2023 Restaurants award for Panevino Ristorante" },
-                                { src: "/images/awards/2021.jpg", alt: "Naples Award Program Best of 2021 Business Hall of Fame award, Italian Restaurant category" },
-                                { src: "/images/awards/slurpy.jpg", alt: "Sluurpy Recommended 2021 badge for Panevino Ristorante" },
-                                { src: "/images/awards/2020.jpg", alt: "Naples Award Program Best of 2020 Business Hall of Fame plaque, 3 consecutive years" },
-                                { src: "/images/awards/2019.jpg", alt: "Naples Award Program Best of 2019 Business Hall of Fame plaque, 2 consecutive years" },
-                                { src: "/images/awards/2018.jpg", alt: "Naples Award Program Best of 2018 Local Business award for Panevino Ristorante" },
-                                { src: "/images/awards/2022cafebar.jpg", alt: "LUXlife Magazine 2022 Restaurant & Bar Awards badge for Most Authentic Italian Restaurant" },
-                            ].map((award, idx) => (
-                                <div
-                                    key={idx}
-                                    className="w-[180px] h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden"
-                                >
-                                    <Image
-                                        src={award.src}
-                                        alt={award.alt}
-                                        width={180}
-                                        height={260}
-                                        className="object-cover w-full h-full"
-                                    />
-                                </div>
-                            ))}
+                        {/* Right: Story */}
+                        <div className="md:col-span-7 md:pt-9">
+                            <p className="text-lg text-secondary leading-relaxed mb-4">
+                                Our mission is to ensure that every guest receives prompt, professional, friendly, and courteous service.
+                                We are dedicated to maintaining a clean, comfortable, and well-maintained environment for our guests and staff.
+                                At Panevino, we provide nutritious, well-prepared meals made with quality ingredients — all at a fair price.
+                            </p>
+                            <p className="text-lg text-secondary leading-relaxed mb-4">
+                                Beyond just food, we offer an experience — a place where every detail reflects our deep-rooted Italian heritage. From the aroma of freshly prepared sauces to the warmth of candlelit dinners, we invite you to feel at home the moment you walk through our doors. Whether you&apos;re celebrating a special occasion or simply enjoying a weekday meal, our team is honored to welcome you with the same love and passion we put into every dish.
+                            </p>
+                            <p className="text-lg text-secondary leading-relaxed">
+                                Panevino is more than a restaurant — it&apos;s a celebration of authentic Italian flavors, family traditions, and heartfelt hospitality.
+                            </p>
                         </div>
                     </div>
 
-                    {/* Right: Awards Text Block */}
-                    <div className="max-w-xl">
-                        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                            The Best Italian Restaurant in Naples, Florida <span className="font-extrabold">To Dine</span>
-                        </h2>
-                        <p className="text-lg text-secondary leading-relaxed mb-4">
-                            How it all came to be...
-                        </p>
-                        <p className="text-lg text-secondary leading-relaxed mb-4">
-                            The <strong>Naples</strong> area dining scene is better than ever. <strong>Panevino</strong> is a family-owned <strong>Northern Italian Restaurant</strong> serving <strong>North Naples</strong> since 1994.
-                        </p>
-                        <blockquote className="border-l-4 border-primary pl-4 italic text-secondary mb-4">
-                            One of our reviews: &quot;I have never eaten better Italian food, especially Chicken Scarparello.&quot;
-                        </blockquote>
-                        <p className="text-lg text-secondary leading-relaxed mb-4">
-                            Our mission is to ensure that every guest receives prompt, professional, friendly, and courteous service.
-                            We are dedicated to maintaining a clean, comfortable, and well-maintained environment for our guests and staff.
-                            At Panevino, we provide nutritious, well-prepared meals made with quality ingredients — all at a fair price.
-                        </p>
-                        <p className="text-lg text-secondary leading-relaxed mb-4">
-                            Beyond just food, we offer an experience — a place where every detail reflects our deep-rooted Italian heritage. From the aroma of freshly prepared sauces to the warmth of candlelit dinners, we invite you to feel at home the moment you walk through our doors. Whether you&apos;re celebrating a special occasion or simply enjoying a weekday meal, our team is honored to welcome you with the same love and passion we put into every dish.
-                        </p>
-                        <p className="text-lg text-secondary leading-relaxed">
-                            Panevino is more than a restaurant — it&apos;s a celebration of authentic Italian flavors, family traditions, and heartfelt hospitality.
-                        </p>
+                    {/* Awards Strip: one fixed-height row, so adding badges never makes the section taller */}
+                    <div className="mt-16">
+                        <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2 border-b border-gray-200 pb-3">
+                            <h3 className="text-xl font-semibold text-gray-900">Awards &amp; Recognition</h3>
+                            <p className="text-sm text-gray-500">
+                                {awards.length} honors since {firstAwardYear}
+                            </p>
+                        </div>
 
+                        <div
+                            className="marquee py-2"
+                            style={{ "--marquee-duration": `${awards.length * 4}s` }}
+                        >
+                            <div className="marquee-track flex w-max">
+                                <ul className="flex gap-6 pr-6">
+                                    {awards.map((award) => (
+                                        <li key={award.src}>
+                                            <AwardTile award={award} onOpen={setSelectedAward} />
+                                        </li>
+                                    ))}
+                                </ul>
+                                {/* Second copy makes the loop seamless; hidden from screen readers */}
+                                <ul className="marquee-clone flex gap-6 pr-6" aria-hidden="true">
+                                    {awards.map((award) => (
+                                        <li key={award.src}>
+                                            <AwardTile award={award} onOpen={setSelectedAward} isClone />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </section>
+
+            {/* Award Modal */}
+            {selectedAward && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+                    onClick={() => setSelectedAward(null)}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label={awardAlt(selectedAward)}
+                >
+                    <figure
+                        className="relative flex max-h-full w-full max-w-lg flex-col items-center"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <Image
+                            src={selectedAward.src}
+                            alt={awardAlt(selectedAward)}
+                            width={800}
+                            height={1100}
+                            className="h-auto max-h-[75vh] w-auto rounded-lg bg-white object-contain p-4"
+                        />
+                        <figcaption className="mt-4 text-center text-white">
+                            {selectedAward.name} · {selectedAward.year}
+                        </figcaption>
+                        <button
+                            type="button"
+                            onClick={() => setSelectedAward(null)}
+                            className="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-2xl text-white hover:bg-black/80"
+                            aria-label="Close"
+                        >
+                            &times;
+                        </button>
+                    </figure>
+                </div>
+            )}
 
             {/* About Panevino Section */}
             <section className="w-full py-20 bg-accent">
