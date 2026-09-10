@@ -6,23 +6,22 @@ import { awards, awardAlt } from "@/data/awards";
 
 const firstAwardYear = Math.min(...awards.map((award) => award.year));
 
-function AwardTile({ award, onOpen, isClone = false }) {
+function AwardTile({ award, onOpen }) {
     return (
         <button
             type="button"
             onClick={() => onOpen(award)}
-            tabIndex={isClone ? -1 : undefined}
-            className="group block w-32 md:w-36 text-center focus:outline-none"
+            className="block w-full rounded-md bg-white p-2 sm:p-3 text-center shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
-            <span className="relative block h-44 md:h-48 rounded-md bg-white shadow-sm ring-1 ring-black/5 transition duration-300 group-hover:-translate-y-1 group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-primary">
-                <Image
-                    src={award.src}
-                    alt={isClone ? "" : awardAlt(award)}
-                    fill
-                    sizes="144px"
-                    className="object-contain p-3"
-                />
-            </span>
+            {/* width/height 0 + h-auto keeps each badge's natural shape, which is what makes the masonry work */}
+            <Image
+                src={award.src}
+                alt={awardAlt(award)}
+                width={0}
+                height={0}
+                sizes="(min-width: 1280px) 160px, (min-width: 768px) 20vw, (min-width: 640px) 25vw, 33vw"
+                className="h-auto w-full"
+            />
             <span className="mt-2 block text-xs font-medium tracking-wide text-gray-500">
                 {award.year}
             </span>
@@ -82,7 +81,7 @@ export default function Awards() {
                         </div>
                     </div>
 
-                    {/* Awards Strip: one fixed-height row, so adding badges never makes the section taller */}
+                    {/* Awards Masonry */}
                     <div className="mt-16">
                         <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2 border-b border-gray-200 pb-3">
                             <h3 className="text-xl font-semibold text-gray-900">Awards &amp; Recognition</h3>
@@ -91,28 +90,13 @@ export default function Awards() {
                             </p>
                         </div>
 
-                        <div
-                            className="marquee py-2"
-                            style={{ "--marquee-duration": `${awards.length * 4}s` }}
-                        >
-                            <div className="marquee-track flex w-max">
-                                <ul className="flex gap-6 pr-6">
-                                    {awards.map((award) => (
-                                        <li key={award.src}>
-                                            <AwardTile award={award} onOpen={setSelectedAward} />
-                                        </li>
-                                    ))}
-                                </ul>
-                                {/* Second copy makes the loop seamless; hidden from screen readers */}
-                                <ul className="marquee-clone flex gap-6 pr-6" aria-hidden="true">
-                                    {awards.map((award) => (
-                                        <li key={award.src}>
-                                            <AwardTile award={award} onOpen={setSelectedAward} isClone />
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
+                        <ul className="columns-3 gap-4 sm:columns-4 sm:gap-6 md:columns-5 lg:columns-6 xl:columns-7">
+                            {awards.map((award) => (
+                                <li key={award.src} className="mb-4 break-inside-avoid sm:mb-6">
+                                    <AwardTile award={award} onOpen={setSelectedAward} />
+                                </li>
+                            ))}
+                        </ul>
                     </div>
 
                 </div>

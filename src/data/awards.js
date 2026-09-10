@@ -1,4 +1,4 @@
-// Award badges shown in the Awards strip, newest first.
+// Award badges shown in the Awards section, newest first.
 // `name` + `year` also feed the Restaurant schema's `award` list (src/lib/seo.js),
 // so adding a badge here is all it takes. Keep `name` identical across years
 // for recurring awards so they merge into one schema entry.

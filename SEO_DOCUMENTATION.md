@@ -64,7 +64,7 @@ Long-tail:
 When something changes, update it in code **and** on Google Business Profile the same day:
 - **Hours:** `openingHoursSpecification` in `src/lib/seo.js` **and** the hours list in `src/components/Footer.js`
 - **Address / phone:** `src/lib/seo.js`, `Footer.js`, `Contact.js`, `Header.js`, `Hero.js`
-- **New award:** put the image in `public/images/awards/` and add one line (image, name, year) to `src/data/awards.js`; the Awards strip and the `award` schema both update automatically
+- **New award:** put the image in `public/images/awards/` and add one line (image, name, year) to `src/data/awards.js`; the Awards grid and the `award` schema both update automatically
 - **Menu changes:** edit `src/data/*.js`; the menu schema updates automatically
 - **New page:** export `metadata = pageMetadata({...})` from it and add it to `src/app/sitemap.js`
 - **New gallery photo:** drop it in `public/images/gallery/` and add its alt text to `src/data/gallery.js`
