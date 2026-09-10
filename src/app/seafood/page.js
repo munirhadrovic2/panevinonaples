@@ -25,7 +25,7 @@ export default function SeafoodPage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-[#4a4a4a] font-light italic max-w-3xl mx-auto text-center mb-12 leading-relaxed tracking-wide">
-                    Dive into the freshest flavors of the sea with Panevino’s seafood selections. From delicate scallops to rich lobster ravioli, our coastal dishes are prepared with the highest quality ingredients and a touch of Italian passion.
+                    Dive into the freshest flavors of the sea with Panevino’s seafood selections. From classic shrimp scampi to linguine loaded with clams, mussels, shrimp and calamari, our coastal dishes are prepared with the highest quality ingredients and a touch of Italian passion.
                 </p>
 
                 {/* Seafood Items */}

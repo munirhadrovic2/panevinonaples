@@ -51,7 +51,6 @@ export const pastaItems = [
         title: "PENNE PANEVINO",
         description: "sundried tomato, mushrooms, spinach in virgin oil and garlic",
         price: "$29.95",
-        image: "/images/pasta/penne-panevino.jpg",
     },
     {
         title: "LINGUINE WHITE CLAM SAUCE",

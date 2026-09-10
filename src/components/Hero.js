@@ -4,16 +4,16 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const heroImages = [
-    "/images/hero-1.jpg",
-    "/images/hero-2.jpg",
-    "/images/hero-3.jpg",
-    "/images/hero-4.jpg",
-    "/images/hero-5.jpg",
-    "/images/hero-6.jpg",
-    "/images/hero-7.jpg",
-    "/images/hero-8.jpg",
-    "/images/hero-9.jpg",
-    "/images/hero-10.jpg",
+    { src: "/images/hero-1.jpg", alt: "Table set for a celebration at Panevino with wine glasses, red napkins, and chilled champagne" },
+    { src: "/images/hero-2.jpg", alt: "Rack of lamb chops served with sautéed peppers, onions, and mushrooms" },
+    { src: "/images/hero-3.jpg", alt: "Thick pasta tossed in a meaty tomato ragù, topped with fresh basil" },
+    { src: "/images/hero-4.jpg", alt: "Chilled shrimp appetizer with sun-dried tomatoes and garlic over lettuce" },
+    { src: "/images/hero-5.jpg", alt: "Seafood linguine with shrimp, clams, mussels, and fish in tomato sauce" },
+    { src: "/images/hero-6.jpg", alt: "Linguine with fresh clams in a garlicky white wine sauce, topped with basil" },
+    { src: "/images/hero-7.jpg", alt: "Two house-made meatballs in marinara sauce, garnished with basil" },
+    { src: "/images/hero-8.jpg", alt: "Baked white fish fillet over spinach with roasted tomato slices and lemon" },
+    { src: "/images/hero-9.jpg", alt: "Breaded cutlet parmigiana with melted mozzarella and marinara, served with spaghetti" },
+    { src: "/images/hero-10.jpg", alt: "Fish fillet with artichokes and sun-dried tomatoes in a lemon butter sauce" },
 ];
 
 export default function Hero() {
@@ -169,8 +169,8 @@ export default function Hero() {
                         style={{ zIndex: 1 }}
                     >
                         <img
-                            src={heroImages[currentImage]}
-                            alt="Panevino Hero"
+                            src={heroImages[currentImage].src}
+                            alt={heroImages[currentImage].alt}
                             className="w-full h-full object-cover"
                             style={{ width: '100vw', height: '100vh' }}
                             draggable={false}

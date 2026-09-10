@@ -1,15 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { galleryImageAlt } from "@/data/gallery";
 
 export default function HomeGallery() {
     const galleryImages = [
-        "/images/gallery/inside1.jpg",
-        "/images/gallery/b9f88da0-7bcc-49fc-b525-3e273a7fc0f0.jpeg",
-        "/images/gallery/inside3.jpg",
-        "/images/gallery/img_4.png",
-        "/images/gallery/inside5.jpg",
-        "/images/gallery/inside6.jpg",
+        "inside1.jpg",
+        "b9f88da0-7bcc-49fc-b525-3e273a7fc0f0.jpeg",
+        "inside3.jpg",
+        "img_4.png",
+        "inside5.jpg",
+        "inside6.jpg",
     ];
 
     return (
@@ -23,14 +24,14 @@ export default function HomeGallery() {
 
                 {/* Gallery Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-                    {galleryImages.map((src, idx) => (
+                    {galleryImages.map((file) => (
                         <div
-                            key={idx}
+                            key={file}
                             className="overflow-hidden rounded-lg shadow-md group relative"
                         >
                             <Image
-                                src={src}
-                                alt={`Gallery image ${idx + 1}`}
+                                src={`/images/gallery/${file}`}
+                                alt={galleryImageAlt(file)}
                                 width={400}
                                 height={300}
                                 className="object-cover w-full h-60 group-hover:scale-105 transition-transform duration-300"

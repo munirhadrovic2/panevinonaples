@@ -11,7 +11,7 @@ export default function Contact() {
                 </h2>
 
                 {/* Phone Number */}
-                <div className="text-center mb-8">
+                <div className="text-center mb-4">
                     <a
                         href="tel:2395148655"
                         aria-label="Call Panevino Ristorante Naples at 239-514-8655"
@@ -20,6 +20,14 @@ export default function Contact() {
                         (239) 514-8655
                     </a>
                 </div>
+
+                {/* Address */}
+                <address className="not-italic text-center text-lg text-gray-700 mb-8">
+                    8853 Tamiami Trail N, Naples, FL 34108
+                    <span className="block text-base text-gray-500 mt-1">
+                        On Tamiami Trail North in North Naples, minutes from Pelican Bay, Vanderbilt Beach and Park Shore
+                    </span>
+                </address>
 
                 {/* Full-width Google Map */}
                 <div className="w-full rounded-lg overflow-hidden shadow-md min-h-[400px] md:min-h-[600px] relative">

@@ -1,30 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Script from "next/script";
 
 export default function Awards() {
-    const reviewJson = {
-        '@context': 'https://schema.org',
-        '@type': 'Review',
-        itemReviewed: {
-            '@type': 'Restaurant',
-            name: 'Panevino Ristorante',
-            url: 'https://panevinonaples.com',
-        },
-        reviewBody: 'I have never eaten better Italian food, especially Chicken Scarparello.',
-        reviewRating: {
-            '@type': 'Rating',
-            ratingValue: '5',
-            bestRating: '5',
-            worstRating: '1'
-        },
-        author: {
-            '@type': 'Person',
-            name: 'Guest'
-        }
-    };
-
     return (
         <div>
             {/* Awards Section */}
@@ -38,7 +16,7 @@ export default function Awards() {
                             <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
                                 <Image
                                     src="/images/awards/award-google-2025.png"
-                                    alt="Google Award 2025"
+                                    alt="BusinessRate Top 3 2025 Italian Restaurant award based on Google reviews, Naples FL"
                                     width={400}
                                     height={260}
                                     className="object-contain w-full h-full"
@@ -47,7 +25,7 @@ export default function Awards() {
                             <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
                                 <Image
                                     src="/images/awards/guru_cert.png"
-                                    alt="Guru 2024"
+                                    alt="Restaurant Guru Recommended 2024 certificate for Panevino Ristorante"
                                     width={400}
                                     height={260}
                                     className="object-contain w-full h-full"
@@ -56,7 +34,7 @@ export default function Awards() {
                             <div className="w-full h-[260px] bg-white shadow-md flex items-center justify-center overflow-hidden">
                                 <Image
                                     src="/images/awards/best_florida.jpg"
-                                    alt="Florida 2024"
+                                    alt="Guide to Florida Best of Florida 2023 Honorable Mention ribbon badge"
                                     width={400}
                                     height={260}
                                     className="object-contain w-full h-full"
@@ -67,18 +45,18 @@ export default function Awards() {
                         {/* Rest of Awards - Regular Grid */}
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                             {[
-                                { src: "/images/awards/lux_life.jpg", alt: "Award 2024" },
-                                { src: "/images/awards/2025.png", alt: "Award 2025" },
-                                { src: "/images/awards/2024.png", alt: "Award 2024" },
-                                { src: "/images/awards/2024-2.jpeg", alt: "Award 2024" },
-                                { src: "/images/awards/2024-guru.png", alt: "Guru 2024" },
-                                { src: "/images/awards/2023.jpg", alt: "Award 2023" },
-                                { src: "/images/awards/2021.jpg", alt: "Award 2021" },
-                                { src: "/images/awards/slurpy.jpg", alt: "Award Slurpy 2021" },
-                                { src: "/images/awards/2020.jpg", alt: "Award 2020" },
-                                { src: "/images/awards/2019.jpg", alt: "Award 2019" },
-                                { src: "/images/awards/2018.jpg", alt: "Award 2018" },
-                                { src: "/images/awards/2022cafebar.jpg", alt: "Award 2018" },
+                                { src: "/images/awards/lux_life.jpg", alt: "LUXlife Magazine 2022 Culinary Excellence certificate for Northern Italian Cuisine" },
+                                { src: "/images/awards/2025.png", alt: "Restaurant Guru Recommended 2025 badge for Panevino Ristorante" },
+                                { src: "/images/awards/2024.png", alt: "Restaurantji Certificate of Excellence 2024 award for Panevino Ristorante" },
+                                { src: "/images/awards/2024-2.jpeg", alt: "Naples Award Program Best of 2024 Business Hall of Fame plaque, 7 consecutive years" },
+                                { src: "/images/awards/2024-guru.png", alt: "Restaurant Guru Recommended 2024 badge for Panevino Ristorante" },
+                                { src: "/images/awards/2023.jpg", alt: "Naples Award Program Best of 2023 Restaurants award for Panevino Ristorante" },
+                                { src: "/images/awards/2021.jpg", alt: "Naples Award Program Best of 2021 Business Hall of Fame award, Italian Restaurant category" },
+                                { src: "/images/awards/slurpy.jpg", alt: "Sluurpy Recommended 2021 badge for Panevino Ristorante" },
+                                { src: "/images/awards/2020.jpg", alt: "Naples Award Program Best of 2020 Business Hall of Fame plaque, 3 consecutive years" },
+                                { src: "/images/awards/2019.jpg", alt: "Naples Award Program Best of 2019 Business Hall of Fame plaque, 2 consecutive years" },
+                                { src: "/images/awards/2018.jpg", alt: "Naples Award Program Best of 2018 Local Business award for Panevino Ristorante" },
+                                { src: "/images/awards/2022cafebar.jpg", alt: "LUXlife Magazine 2022 Restaurant & Bar Awards badge for Most Authentic Italian Restaurant" },
                             ].map((award, idx) => (
                                 <div
                                     key={idx}
@@ -105,7 +83,7 @@ export default function Awards() {
                             How it all came to be...
                         </p>
                         <p className="text-lg text-secondary leading-relaxed mb-4">
-                            The <strong>Naples</strong> area dining scene is better than ever. <strong>Panevino</strong> is a family-owned <strong>Northern Italian Restaurant</strong> serving the community since 1994.
+                            The <strong>Naples</strong> area dining scene is better than ever. <strong>Panevino</strong> is a family-owned <strong>Northern Italian Restaurant</strong> serving <strong>North Naples</strong> since 1994.
                         </p>
                         <blockquote className="border-l-4 border-primary pl-4 italic text-secondary mb-4">
                             One of our reviews: &quot;I have never eaten better Italian food, especially Chicken Scarparello.&quot;
@@ -116,7 +94,7 @@ export default function Awards() {
                             At Panevino, we provide nutritious, well-prepared meals made with quality ingredients — all at a fair price.
                         </p>
                         <p className="text-lg text-secondary leading-relaxed mb-4">
-                            Beyond just food, we offer an experience — a place where every detail reflects our deep-rooted Italian heritage. From the aroma of freshly prepared sauces to the warmth of candlelit dinners, we invite you to feel at home the moment you walk through our doors. Whether youapos;re celebrating a special occasion or simply enjoying a weekday meal, our team is honored to welcome you with the same love and passion we put into every dish.
+                            Beyond just food, we offer an experience — a place where every detail reflects our deep-rooted Italian heritage. From the aroma of freshly prepared sauces to the warmth of candlelit dinners, we invite you to feel at home the moment you walk through our doors. Whether you&apos;re celebrating a special occasion or simply enjoying a weekday meal, our team is honored to welcome you with the same love and passion we put into every dish.
                         </p>
                         <p className="text-lg text-secondary leading-relaxed">
                             Panevino is more than a restaurant — it&apos;s a celebration of authentic Italian flavors, family traditions, and heartfelt hospitality.
@@ -221,7 +199,7 @@ export default function Awards() {
                         <div className="flex-1 flex items-center justify-center p-6">
                             <Image
                                 src="/images/guests.jpg"
-                                alt="Panevino Ristorante"
+                                alt="Two couples posing by the gift certificate sign at Panevino"
                                 width={600}
                                 height={400}
                                 className="object-cover rounded-lg w-full h-auto"
@@ -230,10 +208,6 @@ export default function Awards() {
                     </div>
                 </div>
             </section>
-
-            <Script id="ld-json-review" type="application/ld+json" strategy="afterInteractive">
-                {JSON.stringify(reviewJson)}
-            </Script>
         </div>
     );
 }

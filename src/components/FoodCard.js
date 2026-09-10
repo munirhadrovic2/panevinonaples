@@ -5,18 +5,21 @@ import Image from "next/image";
 export default function FoodCard({ item, onClick }) {
     return (
         <div
-            className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden cursor-pointer border"
+            className={`bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border ${item.image ? "cursor-pointer" : ""}`}
             onClick={() => onClick(item.image)}
         >
             <div className="flex items-stretch">
-                <div className="w-32 h-32 relative flex-shrink-0">
-                    <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                    />
-                </div>
+                {item.image && (
+                    <div className="w-32 h-32 relative flex-shrink-0">
+                        <Image
+                            src={item.image}
+                            alt={item.title}
+                            fill
+                            sizes="128px"
+                            className="object-cover"
+                        />
+                    </div>
+                )}
                 <div className="flex flex-col justify-center p-4 w-full">
                     <div className="flex justify-between items-start mb-2">
                         <h3 className="text-xl font-normal text-gray-800">

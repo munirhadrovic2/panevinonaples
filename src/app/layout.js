@@ -1,30 +1,37 @@
 import './globals.css';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import { Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import Analytics from "@/components/Analytics";
 import { Suspense } from 'react';
+import { SITE_URL, SITE_NAME, TITLE_SUFFIX, SHARE_IMAGE_SIZE, restaurantJsonLd } from "@/lib/seo";
 
 export const viewport = {
     themeColor: '#8B0000',
 };
 
+const DEFAULT_TITLE = 'Panevino Ristorante | Italian Restaurant in North Naples, FL';
+const DEFAULT_DESCRIPTION = "Family-owned Northern Italian restaurant in North Naples, FL since 1994. Homemade pasta, fresh seafood, veal and chef's specials on Tamiami Trail North.";
+
 export const metadata = {
-    metadataBase: new URL('https://panevinonaples.com'),
-    applicationName: 'Panevino Ristorante Naples',
+    metadataBase: new URL(SITE_URL),
+    applicationName: SITE_NAME,
     title: {
-        default: 'Panevino Naples - Italian Restaurant on Tamiami Trail',
-        template: '%s | Panevino Naples',
+        default: DEFAULT_TITLE,
+        template: `%s | ${TITLE_SUFFIX}`,
     },
-    description: 'Family-owned Northern Italian restaurant in Naples, Florida since 1994. Authentic pasta, seafood, and Italian classics on Tamiami Trail North. Reservations accepted.',
+    description: DEFAULT_DESCRIPTION,
     keywords: [
+        'Italian restaurant North Naples',
         'Italian restaurant Naples FL',
         'Panevino Ristorante Naples',
-        'Northern Italian cuisine',
-        'Homemade pasta Naples',
-        'Tamiami Trail restaurants',
-        'Best Italian food Naples Florida',
+        'Northern Italian cuisine Naples',
+        'Homemade pasta Naples FL',
+        'Tamiami Trail North restaurants',
+        'Italian restaurant near Pelican Bay',
+        'Italian restaurant near Vanderbilt Beach',
     ],
     alternates: {
         canonical: '/',
@@ -32,25 +39,22 @@ export const metadata = {
     manifest: '/manifest.json',
     openGraph: {
         type: 'website',
-        url: 'https://panevinonaples.com/',
-        title: 'Panevino Naples - Italian Restaurant on Tamiami Trail',
-        description: 'Authentic Italian restaurant in Naples, FL since 1994. Pasta, seafood, and Northern Italian dishes. Call (239) 514-8655.',
-        siteName: 'Panevino Ristorante Naples',
+        url: `${SITE_URL}/`,
+        title: DEFAULT_TITLE,
+        description: DEFAULT_DESCRIPTION,
+        siteName: SITE_NAME,
         images: [
             {
                 url: '/images/hero-2.jpg',
-                width: 1200,
-                height: 630,
-                alt: 'Panevino Ristorante Naples - Authentic Italian Dining',
+                ...SHARE_IMAGE_SIZE,
+                alt: 'Panevino Ristorante, Italian restaurant in North Naples, FL',
             },
         ],
         locale: 'en_US',
     },
+    // No explicit title/description/image: X falls back to each page's Open Graph tags
     twitter: {
         card: 'summary_large_image',
-        title: 'Panevino Naples - Italian Restaurant',
-        description: 'Northern Italian cuisine in Naples, Florida since 1994. Reservations accepted. Call (239) 514-8655.',
-        images: ['/images/hero-2.jpg'],
     },
     robots: {
         index: true,
@@ -91,55 +95,6 @@ const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '700'] }
 const GTM_ID = 'GTM-K5QFHRRW';
 
 export default function RootLayout({ children }) {
-    const ldJson = {
-        '@context': 'https://schema.org',
-        '@type': 'Restaurant',
-        name: 'Panevino Ristorante',
-        image: 'https://panevinonaples.com/images/hero-2.jpg',
-        '@id': 'https://panevinonaples.com',
-        url: 'https://panevinonaples.com',
-        telephone: '+1-239-514-8655',
-        priceRange: '$$',
-        servesCuisine: ['Italian', 'Northern Italian', 'Seafood', 'Pasta'],
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: '8853 Tamiami Trail N',
-            addressLocality: 'Naples',
-            addressRegion: 'FL',
-            postalCode: '34108',
-            addressCountry: 'US',
-        },
-        geo: {
-            '@type': 'GeoCoordinates',
-            latitude: 26.232610877115057,
-            longitude: -81.8090155881942,
-        },
-        openingHoursSpecification: [
-            {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: [
-                    'Monday',
-                    'Tuesday',
-                    'Wednesday',
-                    'Thursday',
-                    'Friday',
-                    'Saturday',
-                    'Sunday',
-                ],
-                opens: '17:00',
-                closes: '21:30',
-            },
-        ],
-        sameAs: [
-            'https://www.facebook.com/PanevinoRistoranteNaples',
-            'https://www.tripadvisor.com/Restaurant_Review-g34467-d393353-Reviews-Panevino_Ristorante_Naples-Naples_Florida.html',
-            'https://restaurantguru.com/Panevino-Ristorante-Naples-Florida',
-        ],
-        hasMenu: 'https://panevinonaples.com/menu.pdf',
-        foundingDate: '1994',
-        acceptsReservations: true,
-    };
-
     return (
         <html lang="en" className={playfair.className}>
         <head>
@@ -190,9 +145,7 @@ export default function RootLayout({ children }) {
         </Suspense>
         {children}
         <Footer />
-        <Script id="ld-json-restaurant" type="application/ld+json" strategy="afterInteractive">
-            {JSON.stringify(ldJson)}
-        </Script>
+        <JsonLd data={restaurantJsonLd} />
         </body>
         </html>
     );

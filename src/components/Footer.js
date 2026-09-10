@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="bg-[#f8f5f0] text-gray-700 pt-16 pb-8 px-6">
-            <div className="container mx-auto" itemScope itemType="https://schema.org/Restaurant">
+            <div className="container mx-auto">
 
                 {/* Top: 3 columns */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -35,25 +35,20 @@ export default function Footer() {
                         </div>
 
                         {/* Description Text */}
-                        <p className="text-md leading-relaxed" itemProp="description">
-                            Family-owned Northern Italian restaurant serving Naples, Florida since 1994. Authentic cuisine, warm hospitality, and timeless tradition.
+                        <p className="text-md leading-relaxed">
+                            Family-owned Northern Italian restaurant serving North Naples, Florida since 1994. Authentic cuisine, warm hospitality, and timeless tradition.
                         </p>
                     </div>
 
                     {/* Center Column: Contact Info */}
                     <div>
                         <h3 className="text-2xl font-bold text-primary mb-6">Contact</h3>
-                        <address className="not-italic" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                            <span itemProp="streetAddress">8853 Tamiami Trl N</span>,
-                            <span> <span itemProp="addressLocality">Naples</span>, <span itemProp="addressRegion">FL</span> <span itemProp="postalCode">34108</span></span>
+                        <address className="not-italic">
+                            8853 Tamiami Trail N, Naples, FL 34108
                         </address>
                         <p className="mb-2">
-                            <a href="tel:2395148655" itemProp="telephone" className="underline hover:text-primary" aria-label="Call Panevino Ristorante Naples at 239-514-8655">(239) 514-8655</a>
+                            <a href="tel:2395148655" className="underline hover:text-primary" aria-label="Call Panevino Ristorante Naples at 239-514-8655">(239) 514-8655</a>
                         </p>
-                        {/* SameAs profile links for structured data */}
-                        <a itemProp="sameAs" href="https://www.facebook.com/PanevinoRistoranteNaples" className="hidden" aria-hidden="true" tabIndex={-1}>Facebook</a>
-                        <a itemProp="sameAs" href="https://www.tripadvisor.com/Restaurant_Review-g34467-d393353-Reviews-Panevino_Ristorante_Naples-Naples_Florida.html" className="hidden" aria-hidden="true" tabIndex={-1}>TripAdvisor</a>
-                        <a itemProp="sameAs" href="https://restaurantguru.com/Panevino-Ristorante-Naples-Florida" className="hidden" aria-hidden="true" tabIndex={-1}>Restaurant Guru</a>
                     </div>
 
                     {/* Right Column: Opening Hours */}
@@ -75,8 +70,6 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
-                        {/* Structured data representation */}
-                        <meta itemProp="openingHours" content="Mo-Su 17:00-21:30" />
                     </div>
                 </div>
 
@@ -97,7 +90,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="text-center text-sm text-gray-600 mt-6">
-                    &copy; {new Date().getFullYear()} <span itemProp="name">Panevino Ristorante</span>. All rights reserved.
+                    &copy; {new Date().getFullYear()} Panevino Ristorante. All rights reserved.
                 </div>
 
                 {/* Powered By */}

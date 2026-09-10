@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
+import { galleryImageAlt } from "@/data/gallery";
 
 export default function Gallery({ images }) {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -102,7 +103,7 @@ export default function Gallery({ images }) {
                             <div className="relative w-full overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                                 <Image
                                     src={`/images/gallery/${filename}`}
-                                    alt={`Gallery Image ${index + 1}`}
+                                    alt={galleryImageAlt(filename)}
                                     width={600}
                                     height={400}
                                     className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
@@ -125,7 +126,7 @@ export default function Gallery({ images }) {
                     >
                         <Image
                             src={selectedImage}
-                            alt="Enlarged Image"
+                            alt={galleryImageAlt(selectedImage.split("/").pop())}
                             width={1200}
                             height={800}
                             className="object-contain rounded-lg w-full h-auto"

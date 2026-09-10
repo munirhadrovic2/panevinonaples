@@ -24,7 +24,6 @@ export const hotItems = [
         price: "$17.95",
     },
     {
-        image: "/images/antipasti/vongole-luciano.jpg",
         title: "VONGOLE LUCIANO",
         description: "fresh clams in white wine, garlic, extra-virgin olive oil sauce",
         price: "$17.95",

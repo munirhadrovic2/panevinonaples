@@ -1,15 +1,19 @@
-export const metadata = {
-  title: 'Seafood - Panevino Ristorante Naples',
-  description: 'Fresh Italian seafood dishes including scallops, lobster ravioli, and more at Panevino Ristorante in Naples, FL.',
-  alternates: { canonical: '/seafood' },
-  openGraph: {
-    title: 'Seafood - Panevino Ristorante Naples',
-    description: 'Explore our coastal Italian seafood menu prepared with the highest quality ingredients in Naples, Florida.',
-    url: 'https://panevinonaples.com/seafood',
-  },
-};
+import JsonLd from '@/components/JsonLd';
+import { pageMetadata, menuPageJsonLd } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Italian Seafood in North Naples, FL',
+  description: 'Shrimp scampi, shrimp arrabbiata, linguine with calamari, seafood linguine and fresh fish of the day at Panevino Ristorante in North Naples, FL.',
+  path: '/seafood',
+  image: '/images/menu/seafood.jpg',
+  imageAlt: 'Italian seafood at Panevino Ristorante in North Naples, FL',
+});
 
 export default function SeafoodLayout({ children }) {
-  return children;
+  return (
+    <>
+      {children}
+      <JsonLd data={menuPageJsonLd('seafood')} />
+    </>
+  );
 }
-
