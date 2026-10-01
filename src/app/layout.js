@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import { Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import Analytics from "@/components/Analytics";
+import ContactClickTracking from "@/components/ContactClickTracking";
 import { Suspense } from 'react';
 import { SITE_URL, SITE_NAME, TITLE_SUFFIX, SHARE_IMAGE_SIZE, restaurantJsonLd } from "@/lib/seo";
 
@@ -143,6 +144,8 @@ export default function RootLayout({ children }) {
         <Suspense fallback={null}>
             <Analytics measurementId="G-ZY4D100SNY" />
         </Suspense>
+        {/* Phone and directions taps — the phone is how this restaurant takes bookings */}
+        <ContactClickTracking measurementId="G-ZY4D100SNY" />
         {children}
         <Footer />
         <JsonLd data={restaurantJsonLd} />

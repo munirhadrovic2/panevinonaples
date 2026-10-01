@@ -13,8 +13,8 @@ export default function Analytics({ measurementId }) {
 
   useEffect(() => {
     const sendPageView = () => {
-      if (typeof window === "undefined") return;
-      if (typeof window.gtag !== "function") return;
+      if (typeof window === "undefined") return false;
+      if (typeof window.gtag !== "function") return false;
 
       const search = searchParams?.toString();
       const pathWithQuery = search ? `${pathname}?${search}` : pathname;
@@ -27,10 +27,12 @@ export default function Analytics({ measurementId }) {
         page_path: pathWithQuery,
         send_to: measurementId,
       });
+      return true;
     };
 
-    // Try immediately and also after a short delay in case gtag isn't ready yet
-    sendPageView();
+    // Try immediately; only if gtag isn't ready yet, try once more after a short delay.
+    // Retrying unconditionally sent every page view twice.
+    if (sendPageView()) return;
     const timer = setTimeout(sendPageView, 300);
     return () => clearTimeout(timer);
   }, [pathname, searchParams, measurementId]);

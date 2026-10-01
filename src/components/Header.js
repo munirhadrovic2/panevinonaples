@@ -91,6 +91,7 @@ export default function Header() {
                     {/* Phone Number */}
                     <a
                         href="tel:2395148655"
+                        data-cta="header"
                         className="ml-4 text-gray-800 hover:text-primary text-large font-medium"
                     >
                         (239) 514-8655

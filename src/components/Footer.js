@@ -47,7 +47,7 @@ export default function Footer() {
                             8853 Tamiami Trail N, Naples, FL 34108
                         </address>
                         <p className="mb-2">
-                            <a href="tel:2395148655" className="underline hover:text-primary" aria-label="Call Panevino Ristorante Naples at 239-514-8655">(239) 514-8655</a>
+                            <a href="tel:2395148655" data-cta="footer" className="underline hover:text-primary" aria-label="Call Panevino Ristorante Naples at 239-514-8655">(239) 514-8655</a>
                         </p>
                     </div>
 

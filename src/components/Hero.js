@@ -256,6 +256,7 @@ export default function Hero() {
                 </a>
                 <a
                     href="tel:2395148655"
+                    data-cta="mobile_sticky"
                     className="w-1/2 text-center py-4 text-lg font-semibold bg-primary text-white hover:bg-primary-dark"
                 >
                     Call Us

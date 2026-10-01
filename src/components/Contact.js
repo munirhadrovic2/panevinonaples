@@ -14,6 +14,7 @@ export default function Contact() {
                 <div className="text-center mb-4">
                     <a
                         href="tel:2395148655"
+                        data-cta="contact"
                         aria-label="Call Panevino Ristorante Naples at 239-514-8655"
                         className="text-2xl md:text-3xl font-semibold text-gray-800 hover:text-primary transition-colors duration-300"
                     >
@@ -43,6 +44,7 @@ export default function Contact() {
                     {/* Directions Button Overlay - Visible on all devices */}
                     <a
                         href="https://www.google.com/maps/dir/?api=1&destination=Panevino+Ristorante+Naples,8853+Tamiami+Trail+N,Naples,FL+34108"
+                        data-cta="contact_map"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="absolute top-4 right-4 bg-white hover:bg-gray-50 shadow-lg rounded-lg px-4 py-3 flex items-center gap-2 transition-all duration-300 hover:shadow-xl z-10"
