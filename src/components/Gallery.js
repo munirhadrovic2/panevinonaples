@@ -44,6 +44,9 @@ export default function Gallery({ images }) {
                             className="w-full h-auto"
                             muted
                             playsInline
+                            // Nothing downloads until someone presses play; the still shows meanwhile.
+                            preload="none"
+                            poster="/images/gallery-video-poster.jpg"
                             onPlay={() => setIsPlaying(true)}
                             onPause={() => setIsPlaying(false)}
                             onEnded={() => setIsPlaying(false)}
