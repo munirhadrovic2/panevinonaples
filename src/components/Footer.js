@@ -97,9 +97,9 @@ export default function Footer() {
                 <div className="text-center text-xs text-gray-400 mt-3 tracking-wide">
                     Powered by{" "}
                     <a
-                        href="https://metronoms.com"
+                        href="https://www.metronoms.com/?utm_source=panevinonaples.com&utm_medium=referral&utm_campaign=powered_by"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener"
                         className="hover:text-gray-600 transition-colors duration-200 underline underline-offset-2"
                     >
                         Metronoms
